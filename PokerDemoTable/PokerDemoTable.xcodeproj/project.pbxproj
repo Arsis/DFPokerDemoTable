@@ -15,13 +15,14 @@
 		A3C5CF7B194771E200D8F7CE /* DFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C5CF7A194771E200D8F7CE /* DFAppDelegate.m */; };
 		A3C5CF7E194771E200D8F7CE /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3C5CF7C194771E200D8F7CE /* Main_iPhone.storyboard */; };
 		A3C5CF81194771E200D8F7CE /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3C5CF7F194771E200D8F7CE /* Main_iPad.storyboard */; };
-		A3C5CF84194771E200D8F7CE /* DFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C5CF83194771E200D8F7CE /* DFViewController.m */; };
 		A3C5CF86194771E200D8F7CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3C5CF85194771E200D8F7CE /* Images.xcassets */; };
 		A3C5CF8D194771E300D8F7CE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C5CF8C194771E300D8F7CE /* XCTest.framework */; };
 		A3C5CF8E194771E300D8F7CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C5CF6A194771E200D8F7CE /* Foundation.framework */; };
 		A3C5CF8F194771E300D8F7CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C5CF6E194771E200D8F7CE /* UIKit.framework */; };
 		A3C5CF97194771E300D8F7CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3C5CF95194771E300D8F7CE /* InfoPlist.strings */; };
 		A3C5CF99194771E300D8F7CE /* PokerDemoTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C5CF98194771E300D8F7CE /* PokerDemoTableTests.m */; };
+		A3C5CFAD1947779200D8F7CE /* DFPlayersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C5CFAC1947779200D8F7CE /* DFPlayersTableViewController.m */; };
+		A3C5CFB0194779B200D8F7CE /* DFRegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C5CFAF194779B200D8F7CE /* DFRegistrationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +48,16 @@
 		A3C5CF7A194771E200D8F7CE /* DFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFAppDelegate.m; sourceTree = "<group>"; };
 		A3C5CF7D194771E200D8F7CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		A3C5CF80194771E200D8F7CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		A3C5CF82194771E200D8F7CE /* DFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFViewController.h; sourceTree = "<group>"; };
-		A3C5CF83194771E200D8F7CE /* DFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFViewController.m; sourceTree = "<group>"; };
 		A3C5CF85194771E200D8F7CE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A3C5CF8B194771E300D8F7CE /* PokerDemoTableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokerDemoTableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C5CF8C194771E300D8F7CE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A3C5CF94194771E300D8F7CE /* PokerDemoTableTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PokerDemoTableTests-Info.plist"; sourceTree = "<group>"; };
 		A3C5CF96194771E300D8F7CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A3C5CF98194771E300D8F7CE /* PokerDemoTableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PokerDemoTableTests.m; sourceTree = "<group>"; };
+		A3C5CFAB1947779200D8F7CE /* DFPlayersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPlayersTableViewController.h; sourceTree = "<group>"; };
+		A3C5CFAC1947779200D8F7CE /* DFPlayersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFPlayersTableViewController.m; sourceTree = "<group>"; };
+		A3C5CFAE194779B200D8F7CE /* DFRegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFRegistrationViewController.h; sourceTree = "<group>"; };
+		A3C5CFAF194779B200D8F7CE /* DFRegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFRegistrationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,12 +117,12 @@
 		A3C5CF70194771E200D8F7CE /* PokerDemoTable */ = {
 			isa = PBXGroup;
 			children = (
+				A3C5CFA3194772A200D8F7CE /* presentation */,
+				A3C5CFA21947729D00D8F7CE /* core */,
 				A3C5CF79194771E200D8F7CE /* DFAppDelegate.h */,
 				A3C5CF7A194771E200D8F7CE /* DFAppDelegate.m */,
 				A3C5CF7C194771E200D8F7CE /* Main_iPhone.storyboard */,
 				A3C5CF7F194771E200D8F7CE /* Main_iPad.storyboard */,
-				A3C5CF82194771E200D8F7CE /* DFViewController.h */,
-				A3C5CF83194771E200D8F7CE /* DFViewController.m */,
 				A3C5CF85194771E200D8F7CE /* Images.xcassets */,
 				A3C5CF71194771E200D8F7CE /* Supporting Files */,
 			);
@@ -153,6 +156,81 @@
 				A3C5CF95194771E300D8F7CE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3C5CFA21947729D00D8F7CE /* core */ = {
+			isa = PBXGroup;
+			children = (
+				A3C5CFA8194772D300D8F7CE /* dao */,
+				A3C5CFA7194772CF00D8F7CE /* bl */,
+				A3C5CFA6194772C700D8F7CE /* bo */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		A3C5CFA3194772A200D8F7CE /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A3C5CFA5194772BD00D8F7CE /* custom controls */,
+				A3C5CFA4194772B500D8F7CE /* viewcontollers */,
+			);
+			path = presentation;
+			sourceTree = "<group>";
+		};
+		A3C5CFA4194772B500D8F7CE /* viewcontollers */ = {
+			isa = PBXGroup;
+			children = (
+				A3C5CFAB1947779200D8F7CE /* DFPlayersTableViewController.h */,
+				A3C5CFAC1947779200D8F7CE /* DFPlayersTableViewController.m */,
+				A3C5CFAE194779B200D8F7CE /* DFRegistrationViewController.h */,
+				A3C5CFAF194779B200D8F7CE /* DFRegistrationViewController.m */,
+			);
+			name = viewcontollers;
+			path = viewcontrollers;
+			sourceTree = "<group>";
+		};
+		A3C5CFA5194772BD00D8F7CE /* custom controls */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "custom controls";
+			sourceTree = "<group>";
+		};
+		A3C5CFA6194772C700D8F7CE /* bo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = bo;
+			sourceTree = "<group>";
+		};
+		A3C5CFA7194772CF00D8F7CE /* bl */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = bl;
+			sourceTree = "<group>";
+		};
+		A3C5CFA8194772D300D8F7CE /* dao */ = {
+			isa = PBXGroup;
+			children = (
+				A3C5CFAA194772E200D8F7CE /* local */,
+				A3C5CFA9194772DB00D8F7CE /* network */,
+			);
+			path = dao;
+			sourceTree = "<group>";
+		};
+		A3C5CFA9194772DB00D8F7CE /* network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		A3C5CFAA194772E200D8F7CE /* local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = local;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,7 +332,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3C5CF7B194771E200D8F7CE /* DFAppDelegate.m in Sources */,
-				A3C5CF84194771E200D8F7CE /* DFViewController.m in Sources */,
+				A3C5CFB0194779B200D8F7CE /* DFRegistrationViewController.m in Sources */,
+				A3C5CFAD1947779200D8F7CE /* DFPlayersTableViewController.m in Sources */,
 				A3C5CF77194771E200D8F7CE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,6 +473,7 @@
 				GCC_PREFIX_HEADER = "PokerDemoTable/PokerDemoTable-Prefix.pch";
 				INFOPLIST_FILE = "PokerDemoTable/PokerDemoTable-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -407,6 +487,7 @@
 				GCC_PREFIX_HEADER = "PokerDemoTable/PokerDemoTable-Prefix.pch";
 				INFOPLIST_FILE = "PokerDemoTable/PokerDemoTable-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
