@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A3C5CF6B194771E200D8F7CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C5CF6A194771E200D8F7CE /* Foundation.framework */; };
+		A3C5CF6D194771E200D8F7CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C5CF6C194771E200D8F7CE /* CoreGraphics.framework */; };
+		A3C5CF6F194771E200D8F7CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C5CF6E194771E200D8F7CE /* UIKit.framework */; };
+		A3C5CF75194771E200D8F7CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3C5CF73194771E200D8F7CE /* InfoPlist.strings */; };
+		A3C5CF77194771E200D8F7CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C5CF76194771E200D8F7CE /* main.m */; };
+		A3C5CF7B194771E200D8F7CE /* DFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C5CF7A194771E200D8F7CE /* DFAppDelegate.m */; };
+		A3C5CF7E194771E200D8F7CE /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3C5CF7C194771E200D8F7CE /* Main_iPhone.storyboard */; };
+		A3C5CF81194771E200D8F7CE /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3C5CF7F194771E200D8F7CE /* Main_iPad.storyboard */; };
+		A3C5CF84194771E200D8F7CE /* DFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C5CF83194771E200D8F7CE /* DFViewController.m */; };
+		A3C5CF86194771E200D8F7CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3C5CF85194771E200D8F7CE /* Images.xcassets */; };
+		A3C5CF8D194771E300D8F7CE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C5CF8C194771E300D8F7CE /* XCTest.framework */; };
+		A3C5CF8E194771E300D8F7CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C5CF6A194771E200D8F7CE /* Foundation.framework */; };
+		A3C5CF8F194771E300D8F7CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C5CF6E194771E200D8F7CE /* UIKit.framework */; };
+		A3C5CF97194771E300D8F7CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3C5CF95194771E300D8F7CE /* InfoPlist.strings */; };
+		A3C5CF99194771E300D8F7CE /* PokerDemoTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C5CF98194771E300D8F7CE /* PokerDemoTableTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A3C5CF90194771E300D8F7CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3C5CF5F194771E200D8F7CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3C5CF66194771E200D8F7CE;
+			remoteInfo = PokerDemoTable;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A3C5CF67194771E200D8F7CE /* PokerDemoTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokerDemoTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3C5CF6A194771E200D8F7CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A3C5CF6C194771E200D8F7CE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A3C5CF6E194771E200D8F7CE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A3C5CF72194771E200D8F7CE /* PokerDemoTable-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PokerDemoTable-Info.plist"; sourceTree = "<group>"; };
+		A3C5CF74194771E200D8F7CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A3C5CF76194771E200D8F7CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A3C5CF78194771E200D8F7CE /* PokerDemoTable-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PokerDemoTable-Prefix.pch"; sourceTree = "<group>"; };
+		A3C5CF79194771E200D8F7CE /* DFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFAppDelegate.h; sourceTree = "<group>"; };
+		A3C5CF7A194771E200D8F7CE /* DFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFAppDelegate.m; sourceTree = "<group>"; };
+		A3C5CF7D194771E200D8F7CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		A3C5CF80194771E200D8F7CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		A3C5CF82194771E200D8F7CE /* DFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFViewController.h; sourceTree = "<group>"; };
+		A3C5CF83194771E200D8F7CE /* DFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFViewController.m; sourceTree = "<group>"; };
+		A3C5CF85194771E200D8F7CE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A3C5CF8B194771E300D8F7CE /* PokerDemoTableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokerDemoTableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3C5CF8C194771E300D8F7CE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A3C5CF94194771E300D8F7CE /* PokerDemoTableTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PokerDemoTableTests-Info.plist"; sourceTree = "<group>"; };
+		A3C5CF96194771E300D8F7CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A3C5CF98194771E300D8F7CE /* PokerDemoTableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PokerDemoTableTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A3C5CF64194771E200D8F7CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3C5CF6D194771E200D8F7CE /* CoreGraphics.framework in Frameworks */,
+				A3C5CF6F194771E200D8F7CE /* UIKit.framework in Frameworks */,
+				A3C5CF6B194771E200D8F7CE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3C5CF88194771E300D8F7CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3C5CF8D194771E300D8F7CE /* XCTest.framework in Frameworks */,
+				A3C5CF8F194771E300D8F7CE /* UIKit.framework in Frameworks */,
+				A3C5CF8E194771E300D8F7CE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A3C5CF5E194771E200D8F7CE = {
+			isa = PBXGroup;
+			children = (
+				A3C5CF70194771E200D8F7CE /* PokerDemoTable */,
+				A3C5CF92194771E300D8F7CE /* PokerDemoTableTests */,
+				A3C5CF69194771E200D8F7CE /* Frameworks */,
+				A3C5CF68194771E200D8F7CE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A3C5CF68194771E200D8F7CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3C5CF67194771E200D8F7CE /* PokerDemoTable.app */,
+				A3C5CF8B194771E300D8F7CE /* PokerDemoTableTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3C5CF69194771E200D8F7CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3C5CF6A194771E200D8F7CE /* Foundation.framework */,
+				A3C5CF6C194771E200D8F7CE /* CoreGraphics.framework */,
+				A3C5CF6E194771E200D8F7CE /* UIKit.framework */,
+				A3C5CF8C194771E300D8F7CE /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3C5CF70194771E200D8F7CE /* PokerDemoTable */ = {
+			isa = PBXGroup;
+			children = (
+				A3C5CF79194771E200D8F7CE /* DFAppDelegate.h */,
+				A3C5CF7A194771E200D8F7CE /* DFAppDelegate.m */,
+				A3C5CF7C194771E200D8F7CE /* Main_iPhone.storyboard */,
+				A3C5CF7F194771E200D8F7CE /* Main_iPad.storyboard */,
+				A3C5CF82194771E200D8F7CE /* DFViewController.h */,
+				A3C5CF83194771E200D8F7CE /* DFViewController.m */,
+				A3C5CF85194771E200D8F7CE /* Images.xcassets */,
+				A3C5CF71194771E200D8F7CE /* Supporting Files */,
+			);
+			path = PokerDemoTable;
+			sourceTree = "<group>";
+		};
+		A3C5CF71194771E200D8F7CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3C5CF72194771E200D8F7CE /* PokerDemoTable-Info.plist */,
+				A3C5CF73194771E200D8F7CE /* InfoPlist.strings */,
+				A3C5CF76194771E200D8F7CE /* main.m */,
+				A3C5CF78194771E200D8F7CE /* PokerDemoTable-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3C5CF92194771E300D8F7CE /* PokerDemoTableTests */ = {
+			isa = PBXGroup;
+			children = (
+				A3C5CF98194771E300D8F7CE /* PokerDemoTableTests.m */,
+				A3C5CF93194771E300D8F7CE /* Supporting Files */,
+			);
+			path = PokerDemoTableTests;
+			sourceTree = "<group>";
+		};
+		A3C5CF93194771E300D8F7CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3C5CF94194771E300D8F7CE /* PokerDemoTableTests-Info.plist */,
+				A3C5CF95194771E300D8F7CE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A3C5CF66194771E200D8F7CE /* PokerDemoTable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3C5CF9C194771E300D8F7CE /* Build configuration list for PBXNativeTarget "PokerDemoTable" */;
+			buildPhases = (
+				A3C5CF63194771E200D8F7CE /* Sources */,
+				A3C5CF64194771E200D8F7CE /* Frameworks */,
+				A3C5CF65194771E200D8F7CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PokerDemoTable;
+			productName = PokerDemoTable;
+			productReference = A3C5CF67194771E200D8F7CE /* PokerDemoTable.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A3C5CF8A194771E300D8F7CE /* PokerDemoTableTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3C5CF9F194771E300D8F7CE /* Build configuration list for PBXNativeTarget "PokerDemoTableTests" */;
+			buildPhases = (
+				A3C5CF87194771E300D8F7CE /* Sources */,
+				A3C5CF88194771E300D8F7CE /* Frameworks */,
+				A3C5CF89194771E300D8F7CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A3C5CF91194771E300D8F7CE /* PBXTargetDependency */,
+			);
+			name = PokerDemoTableTests;
+			productName = PokerDemoTableTests;
+			productReference = A3C5CF8B194771E300D8F7CE /* PokerDemoTableTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A3C5CF5F194771E200D8F7CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DF;
+				LastUpgradeCheck = 0510;
+				TargetAttributes = {
+					A3C5CF8A194771E300D8F7CE = {
+						TestTargetID = A3C5CF66194771E200D8F7CE;
+					};
+				};
+			};
+			buildConfigurationList = A3C5CF62194771E200D8F7CE /* Build configuration list for PBXProject "PokerDemoTable" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A3C5CF5E194771E200D8F7CE;
+			productRefGroup = A3C5CF68194771E200D8F7CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A3C5CF66194771E200D8F7CE /* PokerDemoTable */,
+				A3C5CF8A194771E300D8F7CE /* PokerDemoTableTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A3C5CF65194771E200D8F7CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3C5CF81194771E200D8F7CE /* Main_iPad.storyboard in Resources */,
+				A3C5CF86194771E200D8F7CE /* Images.xcassets in Resources */,
+				A3C5CF7E194771E200D8F7CE /* Main_iPhone.storyboard in Resources */,
+				A3C5CF75194771E200D8F7CE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3C5CF89194771E300D8F7CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3C5CF97194771E300D8F7CE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A3C5CF63194771E200D8F7CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3C5CF7B194771E200D8F7CE /* DFAppDelegate.m in Sources */,
+				A3C5CF84194771E200D8F7CE /* DFViewController.m in Sources */,
+				A3C5CF77194771E200D8F7CE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3C5CF87194771E300D8F7CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3C5CF99194771E300D8F7CE /* PokerDemoTableTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A3C5CF91194771E300D8F7CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A3C5CF66194771E200D8F7CE /* PokerDemoTable */;
+			targetProxy = A3C5CF90194771E300D8F7CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A3C5CF73194771E200D8F7CE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3C5CF74194771E200D8F7CE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A3C5CF7C194771E200D8F7CE /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3C5CF7D194771E200D8F7CE /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		A3C5CF7F194771E200D8F7CE /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3C5CF80194771E200D8F7CE /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		A3C5CF95194771E300D8F7CE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3C5CF96194771E300D8F7CE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A3C5CF9A194771E300D8F7CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A3C5CF9B194771E300D8F7CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A3C5CF9D194771E300D8F7CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PokerDemoTable/PokerDemoTable-Prefix.pch";
+				INFOPLIST_FILE = "PokerDemoTable/PokerDemoTable-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A3C5CF9E194771E300D8F7CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PokerDemoTable/PokerDemoTable-Prefix.pch";
+				INFOPLIST_FILE = "PokerDemoTable/PokerDemoTable-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A3C5CFA0194771E300D8F7CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PokerDemoTable.app/PokerDemoTable";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PokerDemoTable/PokerDemoTable-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PokerDemoTableTests/PokerDemoTableTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A3C5CFA1194771E300D8F7CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PokerDemoTable.app/PokerDemoTable";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PokerDemoTable/PokerDemoTable-Prefix.pch";
+				INFOPLIST_FILE = "PokerDemoTableTests/PokerDemoTableTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A3C5CF62194771E200D8F7CE /* Build configuration list for PBXProject "PokerDemoTable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3C5CF9A194771E300D8F7CE /* Debug */,
+				A3C5CF9B194771E300D8F7CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3C5CF9C194771E300D8F7CE /* Build configuration list for PBXNativeTarget "PokerDemoTable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3C5CF9D194771E300D8F7CE /* Debug */,
+				A3C5CF9E194771E300D8F7CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A3C5CF9F194771E300D8F7CE /* Build configuration list for PBXNativeTarget "PokerDemoTableTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3C5CFA0194771E300D8F7CE /* Debug */,
+				A3C5CFA1194771E300D8F7CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A3C5CF5F194771E200D8F7CE /* Project object */;
+}
