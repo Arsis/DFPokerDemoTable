@@ -7,10 +7,15 @@
 //
 
 #import "DFRegistrationViewController.h"
-
-@interface DFRegistrationViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UINavigationBarDelegate>
+#import "DFDataModelController.h"
+#import "UIImage+Resizing.h"
+@import QuartzCore;
+@interface DFRegistrationViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UINavigationBarDelegate, UITextFieldDelegate>
+@property (nonatomic, weak) NSManagedObjectContext *currentContext;
+@property (nonatomic, weak) UINavigationItem *currentNavigationItem;
 - (void)registerButtonPressed:(id)sender;
 - (void)cancelButtonPressed:(id)sender;
+- (void)registerNewPlayer;
 @end
 
 @implementation DFRegistrationViewController
@@ -28,6 +33,7 @@
 {
     [super viewDidLoad];
     [self setupNavigationBar];
+    self.currentContext = [[DFDataModelController sharedInstance] mainContext];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,6 +57,7 @@
     navigationItem.leftBarButtonItem = leftBarButtonItem;
     navigationItem.rightBarButtonItem = rightBarButtonItem;
     [navigationBar pushNavigationItem:navigationItem animated:NO];
+    self.currentNavigationItem = navigationItem;
     [self.view addSubview:navigationBar];
 }
 
@@ -66,6 +73,7 @@
         UIImagePickerController *imagePickerController = [[UIImagePickerController alloc]init];
         imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
         imagePickerController.delegate = self;
+        imagePickerController.allowsEditing = YES;
         [self presentViewController:imagePickerController
                            animated:YES
                          completion:nil];
@@ -85,8 +93,51 @@
 }
 
 - (void)registerButtonPressed:(id)sender {
-    [self dismissViewControllerAnimated:YES
-                             completion:nil];
+    if ([self validateDataInTextView:self.firstNameTextField] && [self validateDataInTextView:self.lastNameTextField]) {
+        [self registerNewPlayer];
+    }
+}
+
+-(void)registerNewPlayer {
+    __block DFPlayer *player = [DFPlayer insertInManagedObjectContext:self.currentContext];
+    player.firstName = self.firstNameTextField.text;
+    player.lastNamae = self.lastNameTextField.text;
+    if (self.avatarImageView.image) {
+        UIActivityIndicatorView *activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        [activityIndicatorView startAnimating];
+        UIBarButtonItem *progressBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:activityIndicatorView];
+        self.currentNavigationItem.rightBarButtonItem = progressBarButtonItem;
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
+                       ^{
+                           NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+                           NSString *imageName = [NSString stringWithFormat:@"%@_%@.png",player.firstName,player.lastNamae];
+                           NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:imageName];
+                           NSError *error;
+                           
+                           [UIImagePNGRepresentation([UIImage imageWithImage:self.avatarImageView.image scaledToSize:CGSizeMake(44, 44)]) writeToFile:filePath
+                                                                                     options:NSDataWritingWithoutOverwriting
+                                                                                       error:&error];
+                           dispatch_async(dispatch_get_main_queue(), ^{
+                               player.avatarPath = filePath;
+                               [self saveCurrentContext];
+                               [self dismissViewControllerAnimated:YES
+                                                        completion:nil];
+                           });
+                       });
+    }
+    else {
+        [self saveCurrentContext];
+        [self dismissViewControllerAnimated:YES
+                                 completion:nil];
+    }
+}
+
+-(void)saveCurrentContext {
+    NSError *saveContextError;
+    if ([self.currentContext save:&saveContextError] == NO) {
+        NSLog(@"error while saving player: %@",saveContextError.localizedDescription);
+        abort();
+    };
 }
 
 #pragma mark - ImagePickerControllerDelegate
@@ -102,6 +153,32 @@
     NSLog(@"image is not selected");
     [self dismissViewControllerAnimated:YES
                              completion:nil];
+}
+
+#pragma mark - UITextFieldDelegate
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == self.firstNameTextField) {
+        [self.lastNameTextField becomeFirstResponder];
+    }
+    else if (textField == self.lastNameTextField) {
+        [self registerButtonPressed:nil];
+    }
+    return YES;
+}
+
+-(BOOL)validateDataInTextView:(UITextField *)textField {
+    if (textField.text.length == 0) {
+        CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
+        animation.autoreverses = YES;
+        animation.speed = 10.0f;
+        animation.repeatCount = 3;
+        animation.toValue = [NSValue valueWithCGPoint:CGPointMake(CGRectGetMidX(textField.frame) + 5, CGRectGetMidY(textField.frame))];
+        [textField.layer addAnimation:animation forKey:nil];
+        [textField becomeFirstResponder];
+        return NO;
+    }
+    return YES;
 }
 
 @end
