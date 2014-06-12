@@ -82,10 +82,10 @@ static NSString *const kRegistrationSegue = @"DFRegistrationSegue";
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     DFPlayer *player = [self.dataModelController.fetchedResultsController objectAtIndexPath:indexPath];
-    NSString *imageCacheName = [NSString stringWithFormat:@"%@_%@",player.firstName,player.lastNamae];
-    UIImage *cachedImageInMemory = [[SDImageCache sharedImageCache]imageFromMemoryCacheForKey:imageCacheName];
+    NSString *cacheKey = [NSString stringWithFormat:@"%@_%@",player.firstName,player.lastNamae];
+    UIImage *cachedImageInMemory = [[SDImageCache sharedImageCache]imageFromMemoryCacheForKey:cacheKey];
     if (!cachedImageInMemory) {
-        [[SDImageCache sharedImageCache] queryDiskCacheForKey:imageCacheName
+        [[SDImageCache sharedImageCache] queryDiskCacheForKey:cacheKey
                                                          done:^(UIImage *image, SDImageCacheType cacheType) {
                                                              cell.imageView.image = image;
                                                              [cell setNeedsLayout];

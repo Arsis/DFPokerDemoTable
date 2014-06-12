@@ -104,35 +104,16 @@
     DFPlayer *player = [DFPlayer insertInManagedObjectContext:self.currentContext];
     player.firstName = self.firstNameTextField.text;
     player.lastNamae = self.lastNameTextField.text;
-//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *imageName = [NSString stringWithFormat:@"%@_%@",player.firstName,player.lastNamae];
-//    NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:imageName];
-    player.avatarPath = imageName;
+    NSString *cacheKey = [NSString stringWithFormat:@"%@_%@",player.firstName,player.lastNamae];
+    player.avatarPath = cacheKey;
     if (self.avatarImageView.image) {
         [[SDImageCache sharedImageCache] storeImage:[UIImage imageWithImage:self.avatarImageView.image scaledToSize:CGSizeMake(44, 44)]
-                                             forKey:imageName
+                                             forKey:cacheKey
                                              toDisk:YES];
-//        [self saveCurrentContext];
         [self dismissViewControllerAnimated:YES
                                  completion:nil];
-//        UIActivityIndicatorView *activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-//        [activityIndicatorView startAnimating];
-//        UIBarButtonItem *progressBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:activityIndicatorView];
-//        self.currentNavigationItem.rightBarButtonItem = progressBarButtonItem;
-//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
-//                       ^{
-//                           NSError *error;
-//                           [UIImagePNGRepresentation([UIImage imageWithImage:self.avatarImageView.image scaledToSize:CGSizeMake(44, 44)]) writeToFile:filePath
-//                                                                                     options:NSDataWritingWithoutOverwriting
-//                                                                                       error:&error];
-//                           dispatch_async(dispatch_get_main_queue(), ^{
-//                               [self dismissViewControllerAnimated:YES
-//                                                        completion:nil];
-//                           });
-//                       });
     }
     else {
-        [self saveCurrentContext];
         [self dismissViewControllerAnimated:YES
                                  completion:nil];
     }
