@@ -1,617 +1,1475 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		A3C5CF6B194771E200D8F7CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C5CF6A194771E200D8F7CE /* Foundation.framework */; };
-		A3C5CF6D194771E200D8F7CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C5CF6C194771E200D8F7CE /* CoreGraphics.framework */; };
-		A3C5CF6F194771E200D8F7CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C5CF6E194771E200D8F7CE /* UIKit.framework */; };
-		A3C5CF75194771E200D8F7CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3C5CF73194771E200D8F7CE /* InfoPlist.strings */; };
-		A3C5CF77194771E200D8F7CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C5CF76194771E200D8F7CE /* main.m */; };
-		A3C5CF7B194771E200D8F7CE /* DFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C5CF7A194771E200D8F7CE /* DFAppDelegate.m */; };
-		A3C5CF7E194771E200D8F7CE /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3C5CF7C194771E200D8F7CE /* Main_iPhone.storyboard */; };
-		A3C5CF81194771E200D8F7CE /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3C5CF7F194771E200D8F7CE /* Main_iPad.storyboard */; };
-		A3C5CF86194771E200D8F7CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3C5CF85194771E200D8F7CE /* Images.xcassets */; };
-		A3C5CF8D194771E300D8F7CE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C5CF8C194771E300D8F7CE /* XCTest.framework */; };
-		A3C5CF8E194771E300D8F7CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C5CF6A194771E200D8F7CE /* Foundation.framework */; };
-		A3C5CF8F194771E300D8F7CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C5CF6E194771E200D8F7CE /* UIKit.framework */; };
-		A3C5CF97194771E300D8F7CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3C5CF95194771E300D8F7CE /* InfoPlist.strings */; };
-		A3C5CF99194771E300D8F7CE /* PokerDemoTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C5CF98194771E300D8F7CE /* PokerDemoTableTests.m */; };
-		A3C5CFAD1947779200D8F7CE /* DFPlayersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C5CFAC1947779200D8F7CE /* DFPlayersTableViewController.m */; };
-		A3C5CFB0194779B200D8F7CE /* DFRegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C5CFAF194779B200D8F7CE /* DFRegistrationViewController.m */; };
-		A3D39CC11948B560000B10F2 /* DFDataModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D39CC01948B560000B10F2 /* DFDataModelController.m */; };
-		A3D39CC41948B597000B10F2 /* DFDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3D39CC21948B597000B10F2 /* DFDataModel.xcdatamodeld */; };
-		A3D39CCF1948BF95000B10F2 /* _DFPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D39CCC1948BF95000B10F2 /* _DFPlayer.m */; };
-		A3D39CD01948BF95000B10F2 /* DFPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D39CCE1948BF95000B10F2 /* DFPlayer.m */; };
-		A3D39CD41948D398000B10F2 /* UIImage+Resizing.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D39CD31948D398000B10F2 /* UIImage+Resizing.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A3C5CF90194771E300D8F7CE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A3C5CF5F194771E200D8F7CE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A3C5CF66194771E200D8F7CE;
-			remoteInfo = PokerDemoTable;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		A3C5CF67194771E200D8F7CE /* PokerDemoTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokerDemoTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3C5CF6A194771E200D8F7CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		A3C5CF6C194771E200D8F7CE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A3C5CF6E194771E200D8F7CE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		A3C5CF72194771E200D8F7CE /* PokerDemoTable-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PokerDemoTable-Info.plist"; sourceTree = "<group>"; };
-		A3C5CF74194771E200D8F7CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A3C5CF76194771E200D8F7CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A3C5CF78194771E200D8F7CE /* PokerDemoTable-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PokerDemoTable-Prefix.pch"; sourceTree = "<group>"; };
-		A3C5CF79194771E200D8F7CE /* DFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFAppDelegate.h; sourceTree = "<group>"; };
-		A3C5CF7A194771E200D8F7CE /* DFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFAppDelegate.m; sourceTree = "<group>"; };
-		A3C5CF7D194771E200D8F7CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		A3C5CF80194771E200D8F7CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		A3C5CF85194771E200D8F7CE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		A3C5CF8B194771E300D8F7CE /* PokerDemoTableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokerDemoTableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3C5CF8C194771E300D8F7CE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		A3C5CF94194771E300D8F7CE /* PokerDemoTableTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PokerDemoTableTests-Info.plist"; sourceTree = "<group>"; };
-		A3C5CF96194771E300D8F7CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A3C5CF98194771E300D8F7CE /* PokerDemoTableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PokerDemoTableTests.m; sourceTree = "<group>"; };
-		A3C5CFAB1947779200D8F7CE /* DFPlayersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPlayersTableViewController.h; sourceTree = "<group>"; };
-		A3C5CFAC1947779200D8F7CE /* DFPlayersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFPlayersTableViewController.m; sourceTree = "<group>"; };
-		A3C5CFAE194779B200D8F7CE /* DFRegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFRegistrationViewController.h; sourceTree = "<group>"; };
-		A3C5CFAF194779B200D8F7CE /* DFRegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFRegistrationViewController.m; sourceTree = "<group>"; };
-		A3D39CBF1948B560000B10F2 /* DFDataModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFDataModelController.h; sourceTree = "<group>"; };
-		A3D39CC01948B560000B10F2 /* DFDataModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFDataModelController.m; sourceTree = "<group>"; };
-		A3D39CC31948B597000B10F2 /* DFDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DFDataModel.xcdatamodel; sourceTree = "<group>"; };
-		A3D39CCB1948BF95000B10F2 /* _DFPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DFPlayer.h; sourceTree = "<group>"; };
-		A3D39CCC1948BF95000B10F2 /* _DFPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DFPlayer.m; sourceTree = "<group>"; };
-		A3D39CCD1948BF95000B10F2 /* DFPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPlayer.h; sourceTree = "<group>"; };
-		A3D39CCE1948BF95000B10F2 /* DFPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFPlayer.m; sourceTree = "<group>"; };
-		A3D39CD21948D398000B10F2 /* UIImage+Resizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resizing.h"; sourceTree = "<group>"; };
-		A3D39CD31948D398000B10F2 /* UIImage+Resizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resizing.m"; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		A3C5CF64194771E200D8F7CE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A3C5CF6D194771E200D8F7CE /* CoreGraphics.framework in Frameworks */,
-				A3C5CF6F194771E200D8F7CE /* UIKit.framework in Frameworks */,
-				A3C5CF6B194771E200D8F7CE /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A3C5CF88194771E300D8F7CE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A3C5CF8D194771E300D8F7CE /* XCTest.framework in Frameworks */,
-				A3C5CF8F194771E300D8F7CE /* UIKit.framework in Frameworks */,
-				A3C5CF8E194771E300D8F7CE /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		A3C5CF5E194771E200D8F7CE = {
-			isa = PBXGroup;
-			children = (
-				A3C5CF70194771E200D8F7CE /* PokerDemoTable */,
-				A3C5CF92194771E300D8F7CE /* PokerDemoTableTests */,
-				A3C5CF69194771E200D8F7CE /* Frameworks */,
-				A3C5CF68194771E200D8F7CE /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		A3C5CF68194771E200D8F7CE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A3C5CF67194771E200D8F7CE /* PokerDemoTable.app */,
-				A3C5CF8B194771E300D8F7CE /* PokerDemoTableTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		A3C5CF69194771E200D8F7CE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A3C5CF6A194771E200D8F7CE /* Foundation.framework */,
-				A3C5CF6C194771E200D8F7CE /* CoreGraphics.framework */,
-				A3C5CF6E194771E200D8F7CE /* UIKit.framework */,
-				A3C5CF8C194771E300D8F7CE /* XCTest.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A3C5CF70194771E200D8F7CE /* PokerDemoTable */ = {
-			isa = PBXGroup;
-			children = (
-				A3C5CFA3194772A200D8F7CE /* presentation */,
-				A3C5CFA21947729D00D8F7CE /* core */,
-				A3C5CF79194771E200D8F7CE /* DFAppDelegate.h */,
-				A3C5CF7A194771E200D8F7CE /* DFAppDelegate.m */,
-				A3C5CF7C194771E200D8F7CE /* Main_iPhone.storyboard */,
-				A3C5CF7F194771E200D8F7CE /* Main_iPad.storyboard */,
-				A3C5CF85194771E200D8F7CE /* Images.xcassets */,
-				A3C5CF71194771E200D8F7CE /* Supporting Files */,
-			);
-			path = PokerDemoTable;
-			sourceTree = "<group>";
-		};
-		A3C5CF71194771E200D8F7CE /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A3C5CF72194771E200D8F7CE /* PokerDemoTable-Info.plist */,
-				A3C5CF73194771E200D8F7CE /* InfoPlist.strings */,
-				A3C5CF76194771E200D8F7CE /* main.m */,
-				A3C5CF78194771E200D8F7CE /* PokerDemoTable-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A3C5CF92194771E300D8F7CE /* PokerDemoTableTests */ = {
-			isa = PBXGroup;
-			children = (
-				A3C5CF98194771E300D8F7CE /* PokerDemoTableTests.m */,
-				A3C5CF93194771E300D8F7CE /* Supporting Files */,
-			);
-			path = PokerDemoTableTests;
-			sourceTree = "<group>";
-		};
-		A3C5CF93194771E300D8F7CE /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A3C5CF94194771E300D8F7CE /* PokerDemoTableTests-Info.plist */,
-				A3C5CF95194771E300D8F7CE /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A3C5CFA21947729D00D8F7CE /* core */ = {
-			isa = PBXGroup;
-			children = (
-				A3D39CD11948D378000B10F2 /* helpers */,
-				A3C5CFA8194772D300D8F7CE /* dao */,
-				A3C5CFA7194772CF00D8F7CE /* bl */,
-				A3C5CFA6194772C700D8F7CE /* bo */,
-			);
-			path = core;
-			sourceTree = "<group>";
-		};
-		A3C5CFA3194772A200D8F7CE /* presentation */ = {
-			isa = PBXGroup;
-			children = (
-				A3C5CFA5194772BD00D8F7CE /* custom controls */,
-				A3C5CFA4194772B500D8F7CE /* viewcontollers */,
-			);
-			path = presentation;
-			sourceTree = "<group>";
-		};
-		A3C5CFA4194772B500D8F7CE /* viewcontollers */ = {
-			isa = PBXGroup;
-			children = (
-				A3C5CFAB1947779200D8F7CE /* DFPlayersTableViewController.h */,
-				A3C5CFAC1947779200D8F7CE /* DFPlayersTableViewController.m */,
-				A3C5CFAE194779B200D8F7CE /* DFRegistrationViewController.h */,
-				A3C5CFAF194779B200D8F7CE /* DFRegistrationViewController.m */,
-			);
-			name = viewcontollers;
-			path = viewcontrollers;
-			sourceTree = "<group>";
-		};
-		A3C5CFA5194772BD00D8F7CE /* custom controls */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "custom controls";
-			sourceTree = "<group>";
-		};
-		A3C5CFA6194772C700D8F7CE /* bo */ = {
-			isa = PBXGroup;
-			children = (
-				A3D39CCB1948BF95000B10F2 /* _DFPlayer.h */,
-				A3D39CCC1948BF95000B10F2 /* _DFPlayer.m */,
-				A3D39CCD1948BF95000B10F2 /* DFPlayer.h */,
-				A3D39CCE1948BF95000B10F2 /* DFPlayer.m */,
-			);
-			path = bo;
-			sourceTree = "<group>";
-		};
-		A3C5CFA7194772CF00D8F7CE /* bl */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = bl;
-			sourceTree = "<group>";
-		};
-		A3C5CFA8194772D300D8F7CE /* dao */ = {
-			isa = PBXGroup;
-			children = (
-				A3C5CFAA194772E200D8F7CE /* local */,
-				A3C5CFA9194772DB00D8F7CE /* network */,
-			);
-			path = dao;
-			sourceTree = "<group>";
-		};
-		A3C5CFA9194772DB00D8F7CE /* network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = network;
-			sourceTree = "<group>";
-		};
-		A3C5CFAA194772E200D8F7CE /* local */ = {
-			isa = PBXGroup;
-			children = (
-				A3D39CBF1948B560000B10F2 /* DFDataModelController.h */,
-				A3D39CC01948B560000B10F2 /* DFDataModelController.m */,
-				A3D39CC21948B597000B10F2 /* DFDataModel.xcdatamodeld */,
-			);
-			path = local;
-			sourceTree = "<group>";
-		};
-		A3D39CD11948D378000B10F2 /* helpers */ = {
-			isa = PBXGroup;
-			children = (
-				A3D39CD21948D398000B10F2 /* UIImage+Resizing.h */,
-				A3D39CD31948D398000B10F2 /* UIImage+Resizing.m */,
-			);
-			path = helpers;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		A3C5CF66194771E200D8F7CE /* PokerDemoTable */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A3C5CF9C194771E300D8F7CE /* Build configuration list for PBXNativeTarget "PokerDemoTable" */;
-			buildPhases = (
-				A3C5CF63194771E200D8F7CE /* Sources */,
-				A3C5CF64194771E200D8F7CE /* Frameworks */,
-				A3C5CF65194771E200D8F7CE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = PokerDemoTable;
-			productName = PokerDemoTable;
-			productReference = A3C5CF67194771E200D8F7CE /* PokerDemoTable.app */;
-			productType = "com.apple.product-type.application";
-		};
-		A3C5CF8A194771E300D8F7CE /* PokerDemoTableTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A3C5CF9F194771E300D8F7CE /* Build configuration list for PBXNativeTarget "PokerDemoTableTests" */;
-			buildPhases = (
-				A3C5CF87194771E300D8F7CE /* Sources */,
-				A3C5CF88194771E300D8F7CE /* Frameworks */,
-				A3C5CF89194771E300D8F7CE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A3C5CF91194771E300D8F7CE /* PBXTargetDependency */,
-			);
-			name = PokerDemoTableTests;
-			productName = PokerDemoTableTests;
-			productReference = A3C5CF8B194771E300D8F7CE /* PokerDemoTableTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		A3C5CF5F194771E200D8F7CE /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				CLASSPREFIX = DF;
-				LastUpgradeCheck = 0510;
-				TargetAttributes = {
-					A3C5CF8A194771E300D8F7CE = {
-						TestTargetID = A3C5CF66194771E200D8F7CE;
-					};
-				};
-			};
-			buildConfigurationList = A3C5CF62194771E200D8F7CE /* Build configuration list for PBXProject "PokerDemoTable" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = A3C5CF5E194771E200D8F7CE;
-			productRefGroup = A3C5CF68194771E200D8F7CE /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				A3C5CF66194771E200D8F7CE /* PokerDemoTable */,
-				A3C5CF8A194771E300D8F7CE /* PokerDemoTableTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		A3C5CF65194771E200D8F7CE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A3C5CF81194771E200D8F7CE /* Main_iPad.storyboard in Resources */,
-				A3C5CF86194771E200D8F7CE /* Images.xcassets in Resources */,
-				A3C5CF7E194771E200D8F7CE /* Main_iPhone.storyboard in Resources */,
-				A3C5CF75194771E200D8F7CE /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A3C5CF89194771E300D8F7CE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A3C5CF97194771E300D8F7CE /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		A3C5CF63194771E200D8F7CE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A3C5CF7B194771E200D8F7CE /* DFAppDelegate.m in Sources */,
-				A3D39CC41948B597000B10F2 /* DFDataModel.xcdatamodeld in Sources */,
-				A3C5CFB0194779B200D8F7CE /* DFRegistrationViewController.m in Sources */,
-				A3D39CCF1948BF95000B10F2 /* _DFPlayer.m in Sources */,
-				A3D39CD01948BF95000B10F2 /* DFPlayer.m in Sources */,
-				A3C5CFAD1947779200D8F7CE /* DFPlayersTableViewController.m in Sources */,
-				A3D39CD41948D398000B10F2 /* UIImage+Resizing.m in Sources */,
-				A3C5CF77194771E200D8F7CE /* main.m in Sources */,
-				A3D39CC11948B560000B10F2 /* DFDataModelController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A3C5CF87194771E300D8F7CE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A3C5CF99194771E300D8F7CE /* PokerDemoTableTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A3C5CF91194771E300D8F7CE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A3C5CF66194771E200D8F7CE /* PokerDemoTable */;
-			targetProxy = A3C5CF90194771E300D8F7CE /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		A3C5CF73194771E200D8F7CE /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A3C5CF74194771E200D8F7CE /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		A3C5CF7C194771E200D8F7CE /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A3C5CF7D194771E200D8F7CE /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		A3C5CF7F194771E200D8F7CE /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A3C5CF80194771E200D8F7CE /* Base */,
-			);
-			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		A3C5CF95194771E300D8F7CE /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A3C5CF96194771E300D8F7CE /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		A3C5CF9A194771E300D8F7CE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		A3C5CF9B194771E300D8F7CE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		A3C5CF9D194771E300D8F7CE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PokerDemoTable/PokerDemoTable-Prefix.pch";
-				INFOPLIST_FILE = "PokerDemoTable/PokerDemoTable-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		A3C5CF9E194771E300D8F7CE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PokerDemoTable/PokerDemoTable-Prefix.pch";
-				INFOPLIST_FILE = "PokerDemoTable/PokerDemoTable-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		A3C5CFA0194771E300D8F7CE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PokerDemoTable.app/PokerDemoTable";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PokerDemoTable/PokerDemoTable-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "PokerDemoTableTests/PokerDemoTableTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		A3C5CFA1194771E300D8F7CE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PokerDemoTable.app/PokerDemoTable";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PokerDemoTable/PokerDemoTable-Prefix.pch";
-				INFOPLIST_FILE = "PokerDemoTableTests/PokerDemoTableTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		A3C5CF62194771E200D8F7CE /* Build configuration list for PBXProject "PokerDemoTable" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A3C5CF9A194771E300D8F7CE /* Debug */,
-				A3C5CF9B194771E300D8F7CE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A3C5CF9C194771E300D8F7CE /* Build configuration list for PBXNativeTarget "PokerDemoTable" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A3C5CF9D194771E300D8F7CE /* Debug */,
-				A3C5CF9E194771E300D8F7CE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A3C5CF9F194771E300D8F7CE /* Build configuration list for PBXNativeTarget "PokerDemoTableTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A3C5CFA0194771E300D8F7CE /* Debug */,
-				A3C5CFA1194771E300D8F7CE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		A3D39CC21948B597000B10F2 /* DFDataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A3D39CC31948B597000B10F2 /* DFDataModel.xcdatamodel */,
-			);
-			currentVersion = A3D39CC31948B597000B10F2 /* DFDataModel.xcdatamodel */;
-			path = DFDataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
-	};
-	rootObject = A3C5CF5F194771E200D8F7CE /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>25ABB5E8CC7B4C00907EC67B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3F89215C3D1B4AC8BA1BD77F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>44FBCBACC3C14A0E90B45B9E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>44FBCBACC3C14A0E90B45B9E</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>5E980DF74B484C1FA5958233</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>A3C5CF5E194771E200D8F7CE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A3C5CF70194771E200D8F7CE</string>
+				<string>A3C5CF92194771E300D8F7CE</string>
+				<string>A3C5CF69194771E200D8F7CE</string>
+				<string>A3C5CF68194771E200D8F7CE</string>
+				<string>25ABB5E8CC7B4C00907EC67B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CF5F194771E200D8F7CE</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>CLASSPREFIX</key>
+				<string>DF</string>
+				<key>LastUpgradeCheck</key>
+				<string>0510</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>A3C5CF8A194771E300D8F7CE</key>
+					<dict>
+						<key>TestTargetID</key>
+						<string>A3C5CF66194771E200D8F7CE</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>A3C5CF62194771E200D8F7CE</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>A3C5CF5E194771E200D8F7CE</string>
+			<key>productRefGroup</key>
+			<string>A3C5CF68194771E200D8F7CE</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>A3C5CF66194771E200D8F7CE</string>
+				<string>A3C5CF8A194771E300D8F7CE</string>
+			</array>
+		</dict>
+		<key>A3C5CF62194771E200D8F7CE</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>A3C5CF9A194771E300D8F7CE</string>
+				<string>A3C5CF9B194771E300D8F7CE</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>A3C5CF63194771E200D8F7CE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>A3C5CF7B194771E200D8F7CE</string>
+				<string>A3D39CC41948B597000B10F2</string>
+				<string>A3C5CFB0194779B200D8F7CE</string>
+				<string>A3D39CCF1948BF95000B10F2</string>
+				<string>A3D39CD01948BF95000B10F2</string>
+				<string>A3C5CFAD1947779200D8F7CE</string>
+				<string>A3D39CD41948D398000B10F2</string>
+				<string>A3C5CF77194771E200D8F7CE</string>
+				<string>A3D39CC11948B560000B10F2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>A3C5CF64194771E200D8F7CE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>A3C5CF6D194771E200D8F7CE</string>
+				<string>A3C5CF6F194771E200D8F7CE</string>
+				<string>A3C5CF6B194771E200D8F7CE</string>
+				<string>3F89215C3D1B4AC8BA1BD77F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>A3C5CF65194771E200D8F7CE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>FB3490081949B072009AF483</string>
+				<string>A3C5CF86194771E200D8F7CE</string>
+				<string>A3C5CF75194771E200D8F7CE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>A3C5CF66194771E200D8F7CE</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>A3C5CF9C194771E300D8F7CE</string>
+			<key>buildPhases</key>
+			<array>
+				<string>5E980DF74B484C1FA5958233</string>
+				<string>A3C5CF63194771E200D8F7CE</string>
+				<string>A3C5CF64194771E200D8F7CE</string>
+				<string>A3C5CF65194771E200D8F7CE</string>
+				<string>F03837970DC94EFE9F1393F5</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>PokerDemoTable</string>
+			<key>productName</key>
+			<string>PokerDemoTable</string>
+			<key>productReference</key>
+			<string>A3C5CF67194771E200D8F7CE</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>A3C5CF67194771E200D8F7CE</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>PokerDemoTable.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>A3C5CF68194771E200D8F7CE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A3C5CF67194771E200D8F7CE</string>
+				<string>A3C5CF8B194771E300D8F7CE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CF69194771E200D8F7CE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A3C5CF6A194771E200D8F7CE</string>
+				<string>A3C5CF6C194771E200D8F7CE</string>
+				<string>A3C5CF6E194771E200D8F7CE</string>
+				<string>A3C5CF8C194771E300D8F7CE</string>
+				<string>44FBCBACC3C14A0E90B45B9E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CF6A194771E200D8F7CE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>A3C5CF6B194771E200D8F7CE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A3C5CF6A194771E200D8F7CE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A3C5CF6C194771E200D8F7CE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>A3C5CF6D194771E200D8F7CE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A3C5CF6C194771E200D8F7CE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A3C5CF6E194771E200D8F7CE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>A3C5CF6F194771E200D8F7CE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A3C5CF6E194771E200D8F7CE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A3C5CF70194771E200D8F7CE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A3C5CFA3194772A200D8F7CE</string>
+				<string>A3C5CFA21947729D00D8F7CE</string>
+				<string>A3C5CF79194771E200D8F7CE</string>
+				<string>A3C5CF7A194771E200D8F7CE</string>
+				<string>A3C5CF7C194771E200D8F7CE</string>
+				<string>A3C5CF7F194771E200D8F7CE</string>
+				<string>A3C5CF85194771E200D8F7CE</string>
+				<string>A3C5CF71194771E200D8F7CE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>PokerDemoTable</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CF71194771E200D8F7CE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A3C5CF72194771E200D8F7CE</string>
+				<string>A3C5CF73194771E200D8F7CE</string>
+				<string>A3C5CF76194771E200D8F7CE</string>
+				<string>A3C5CF78194771E200D8F7CE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CF72194771E200D8F7CE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>PokerDemoTable-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CF73194771E200D8F7CE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A3C5CF74194771E200D8F7CE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CF74194771E200D8F7CE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CF75194771E200D8F7CE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A3C5CF73194771E200D8F7CE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A3C5CF76194771E200D8F7CE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CF77194771E200D8F7CE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A3C5CF76194771E200D8F7CE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A3C5CF78194771E200D8F7CE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>PokerDemoTable-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CF79194771E200D8F7CE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>DFAppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CF7A194771E200D8F7CE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>DFAppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CF7B194771E200D8F7CE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A3C5CF7A194771E200D8F7CE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A3C5CF7C194771E200D8F7CE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>FB34900B1949B0DB009AF483</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main_iPhone.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CF7F194771E200D8F7CE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A3C5CF80194771E200D8F7CE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main_iPad.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CF80194771E200D8F7CE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main_iPad.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CF85194771E200D8F7CE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CF86194771E200D8F7CE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A3C5CF85194771E200D8F7CE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A3C5CF87194771E300D8F7CE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>A3C5CF99194771E300D8F7CE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>A3C5CF88194771E300D8F7CE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>A3C5CF8D194771E300D8F7CE</string>
+				<string>A3C5CF8F194771E300D8F7CE</string>
+				<string>A3C5CF8E194771E300D8F7CE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>A3C5CF89194771E300D8F7CE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>A3C5CF97194771E300D8F7CE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>A3C5CF8A194771E300D8F7CE</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>A3C5CF9F194771E300D8F7CE</string>
+			<key>buildPhases</key>
+			<array>
+				<string>A3C5CF87194771E300D8F7CE</string>
+				<string>A3C5CF88194771E300D8F7CE</string>
+				<string>A3C5CF89194771E300D8F7CE</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>A3C5CF91194771E300D8F7CE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>PokerDemoTableTests</string>
+			<key>productName</key>
+			<string>PokerDemoTableTests</string>
+			<key>productReference</key>
+			<string>A3C5CF8B194771E300D8F7CE</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>A3C5CF8B194771E300D8F7CE</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>PokerDemoTableTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>A3C5CF8C194771E300D8F7CE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>XCTest.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/XCTest.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>A3C5CF8D194771E300D8F7CE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A3C5CF8C194771E300D8F7CE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A3C5CF8E194771E300D8F7CE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A3C5CF6A194771E200D8F7CE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A3C5CF8F194771E300D8F7CE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A3C5CF6E194771E200D8F7CE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A3C5CF90194771E300D8F7CE</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>A3C5CF5F194771E200D8F7CE</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>A3C5CF66194771E200D8F7CE</string>
+			<key>remoteInfo</key>
+			<string>PokerDemoTable</string>
+		</dict>
+		<key>A3C5CF91194771E300D8F7CE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>A3C5CF66194771E200D8F7CE</string>
+			<key>targetProxy</key>
+			<string>A3C5CF90194771E300D8F7CE</string>
+		</dict>
+		<key>A3C5CF92194771E300D8F7CE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A3C5CF98194771E300D8F7CE</string>
+				<string>A3C5CF93194771E300D8F7CE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>PokerDemoTableTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CF93194771E300D8F7CE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A3C5CF94194771E300D8F7CE</string>
+				<string>A3C5CF95194771E300D8F7CE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CF94194771E300D8F7CE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>PokerDemoTableTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CF95194771E300D8F7CE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A3C5CF96194771E300D8F7CE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CF96194771E300D8F7CE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CF97194771E300D8F7CE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A3C5CF95194771E300D8F7CE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A3C5CF98194771E300D8F7CE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>PokerDemoTableTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CF99194771E300D8F7CE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A3C5CF98194771E300D8F7CE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A3C5CF9A194771E300D8F7CE</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>A3C5CF9B194771E300D8F7CE</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>A3C5CF9C194771E300D8F7CE</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>A3C5CF9D194771E300D8F7CE</string>
+				<string>A3C5CF9E194771E300D8F7CE</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>A3C5CF9D194771E300D8F7CE</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>25ABB5E8CC7B4C00907EC67B</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>PokerDemoTable/PokerDemoTable-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>PokerDemoTable/PokerDemoTable-Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>5.1</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1</string>
+				<key>VALID_ARCHS</key>
+				<string>armv7 armv7s</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>A3C5CF9E194771E300D8F7CE</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>25ABB5E8CC7B4C00907EC67B</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>PokerDemoTable/PokerDemoTable-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>PokerDemoTable/PokerDemoTable-Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>5.1</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1</string>
+				<key>VALID_ARCHS</key>
+				<string>armv7 armv7s</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>A3C5CF9F194771E300D8F7CE</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>A3C5CFA0194771E300D8F7CE</string>
+				<string>A3C5CFA1194771E300D8F7CE</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>A3C5CFA0194771E300D8F7CE</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/PokerDemoTable.app/PokerDemoTable</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>PokerDemoTable/PokerDemoTable-Prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>PokerDemoTableTests/PokerDemoTableTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>A3C5CFA1194771E300D8F7CE</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/PokerDemoTable.app/PokerDemoTable</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>PokerDemoTable/PokerDemoTable-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>PokerDemoTableTests/PokerDemoTableTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>A3C5CFA21947729D00D8F7CE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A3D39CD11948D378000B10F2</string>
+				<string>A3C5CFA8194772D300D8F7CE</string>
+				<string>A3C5CFA7194772CF00D8F7CE</string>
+				<string>A3C5CFA6194772C700D8F7CE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>core</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CFA3194772A200D8F7CE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A3C5CFA5194772BD00D8F7CE</string>
+				<string>A3C5CFA4194772B500D8F7CE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>presentation</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CFA4194772B500D8F7CE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A3C5CFAB1947779200D8F7CE</string>
+				<string>A3C5CFAC1947779200D8F7CE</string>
+				<string>A3C5CFAE194779B200D8F7CE</string>
+				<string>A3C5CFAF194779B200D8F7CE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>viewcontollers</string>
+			<key>path</key>
+			<string>viewcontrollers</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CFA5194772BD00D8F7CE</key>
+		<dict>
+			<key>children</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>custom controls</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CFA6194772C700D8F7CE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A3D39CCB1948BF95000B10F2</string>
+				<string>A3D39CCC1948BF95000B10F2</string>
+				<string>A3D39CCD1948BF95000B10F2</string>
+				<string>A3D39CCE1948BF95000B10F2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>bo</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CFA7194772CF00D8F7CE</key>
+		<dict>
+			<key>children</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>bl</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CFA8194772D300D8F7CE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A3C5CFAA194772E200D8F7CE</string>
+				<string>A3C5CFA9194772DB00D8F7CE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>dao</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CFA9194772DB00D8F7CE</key>
+		<dict>
+			<key>children</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>network</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CFAA194772E200D8F7CE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A3D39CBF1948B560000B10F2</string>
+				<string>A3D39CC01948B560000B10F2</string>
+				<string>A3D39CC21948B597000B10F2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>local</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CFAB1947779200D8F7CE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>DFPlayersTableViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CFAC1947779200D8F7CE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>DFPlayersTableViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CFAD1947779200D8F7CE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A3C5CFAC1947779200D8F7CE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A3C5CFAE194779B200D8F7CE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>DFRegistrationViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CFAF194779B200D8F7CE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>DFRegistrationViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3C5CFB0194779B200D8F7CE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A3C5CFAF194779B200D8F7CE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A3D39CBF1948B560000B10F2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>DFDataModelController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3D39CC01948B560000B10F2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>DFDataModelController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3D39CC11948B560000B10F2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A3D39CC01948B560000B10F2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A3D39CC21948B597000B10F2</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A3D39CC31948B597000B10F2</string>
+			</array>
+			<key>currentVersion</key>
+			<string>A3D39CC31948B597000B10F2</string>
+			<key>isa</key>
+			<string>XCVersionGroup</string>
+			<key>path</key>
+			<string>DFDataModel.xcdatamodeld</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+			<key>versionGroupType</key>
+			<string>wrapper.xcdatamodel</string>
+		</dict>
+		<key>A3D39CC31948B597000B10F2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.xcdatamodel</string>
+			<key>path</key>
+			<string>DFDataModel.xcdatamodel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3D39CC41948B597000B10F2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A3D39CC21948B597000B10F2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A3D39CCB1948BF95000B10F2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>_DFPlayer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3D39CCC1948BF95000B10F2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>_DFPlayer.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3D39CCD1948BF95000B10F2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>DFPlayer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3D39CCE1948BF95000B10F2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>DFPlayer.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3D39CCF1948BF95000B10F2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A3D39CCC1948BF95000B10F2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A3D39CD01948BF95000B10F2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A3D39CCE1948BF95000B10F2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A3D39CD11948D378000B10F2</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A3D39CD21948D398000B10F2</string>
+				<string>A3D39CD31948D398000B10F2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>helpers</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3D39CD21948D398000B10F2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>UIImage+Resizing.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3D39CD31948D398000B10F2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>UIImage+Resizing.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A3D39CD41948D398000B10F2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A3D39CD31948D398000B10F2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F03837970DC94EFE9F1393F5</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>FB3490081949B072009AF483</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A3C5CF7C194771E200D8F7CE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>FB34900B1949B0DB009AF483</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/Main_iPhone.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>A3C5CF5F194771E200D8F7CE</string>
+</dict>
+</plist>

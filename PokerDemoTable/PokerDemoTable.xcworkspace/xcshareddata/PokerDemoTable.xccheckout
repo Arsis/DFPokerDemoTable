@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>E632391A-4C5A-4B7B-BFF3-E0271D1688AB</string>
+	<string>6DEA99D7-BBE8-485F-9549-C97EC2B208CA</string>
 	<key>IDESourceControlProjectName</key>
 	<string>PokerDemoTable</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,11 +14,11 @@
 		<string>https://github.com/Arsis/DFPokerDemoTable.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>PokerDemoTable/PokerDemoTable.xcodeproj/project.xcworkspace</string>
+	<string>PokerDemoTable/PokerDemoTable.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>2E6D5F6F-4F1A-4AA8-B5EC-EC796962B635</key>
-		<string>../../..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/Arsis/DFPokerDemoTable.git</string>

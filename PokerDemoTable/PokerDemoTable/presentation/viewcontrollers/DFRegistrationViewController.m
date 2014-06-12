@@ -9,6 +9,7 @@
 #import "DFRegistrationViewController.h"
 #import "DFDataModelController.h"
 #import "UIImage+Resizing.h"
+#import <SDImageCache.h>
 @import QuartzCore;
 @interface DFRegistrationViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UINavigationBarDelegate, UITextFieldDelegate>
 @property (nonatomic, weak) NSManagedObjectContext *currentContext;
@@ -43,7 +44,8 @@
 }
 
 - (void)setupNavigationBar  {
-    UINavigationBar *navigationBar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, 320, 64)];
+    CGFloat navBarHeight = NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1 ? 64 : 44;
+    UINavigationBar *navigationBar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, 320, navBarHeight)];
     [navigationBar setDelegate:self];
     UINavigationItem *navigationItem = [[UINavigationItem alloc]initWithTitle:@"Registration"];
     UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Cancel"
@@ -99,37 +101,42 @@
 }
 
 -(void)registerNewPlayer {
-    __block DFPlayer *player = [DFPlayer insertInManagedObjectContext:self.currentContext];
+    DFPlayer *player = [DFPlayer insertInManagedObjectContext:self.currentContext];
     player.firstName = self.firstNameTextField.text;
     player.lastNamae = self.lastNameTextField.text;
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *imageName = [NSString stringWithFormat:@"%@_%@",player.firstName,player.lastNamae];
+//    NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:imageName];
+    player.avatarPath = imageName;
     if (self.avatarImageView.image) {
-        UIActivityIndicatorView *activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-        [activityIndicatorView startAnimating];
-        UIBarButtonItem *progressBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:activityIndicatorView];
-        self.currentNavigationItem.rightBarButtonItem = progressBarButtonItem;
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
-                       ^{
-                           NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-                           NSString *imageName = [NSString stringWithFormat:@"%@_%@.png",player.firstName,player.lastNamae];
-                           NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:imageName];
-                           NSError *error;
-                           
-                           [UIImagePNGRepresentation([UIImage imageWithImage:self.avatarImageView.image scaledToSize:CGSizeMake(44, 44)]) writeToFile:filePath
-                                                                                     options:NSDataWritingWithoutOverwriting
-                                                                                       error:&error];
-                           dispatch_async(dispatch_get_main_queue(), ^{
-                               player.avatarPath = filePath;
-                               [self saveCurrentContext];
-                               [self dismissViewControllerAnimated:YES
-                                                        completion:nil];
-                           });
-                       });
+        [[SDImageCache sharedImageCache] storeImage:[UIImage imageWithImage:self.avatarImageView.image scaledToSize:CGSizeMake(44, 44)]
+                                             forKey:imageName
+                                             toDisk:YES];
+//        [self saveCurrentContext];
+        [self dismissViewControllerAnimated:YES
+                                 completion:nil];
+//        UIActivityIndicatorView *activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+//        [activityIndicatorView startAnimating];
+//        UIBarButtonItem *progressBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:activityIndicatorView];
+//        self.currentNavigationItem.rightBarButtonItem = progressBarButtonItem;
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
+//                       ^{
+//                           NSError *error;
+//                           [UIImagePNGRepresentation([UIImage imageWithImage:self.avatarImageView.image scaledToSize:CGSizeMake(44, 44)]) writeToFile:filePath
+//                                                                                     options:NSDataWritingWithoutOverwriting
+//                                                                                       error:&error];
+//                           dispatch_async(dispatch_get_main_queue(), ^{
+//                               [self dismissViewControllerAnimated:YES
+//                                                        completion:nil];
+//                           });
+//                       });
     }
     else {
         [self saveCurrentContext];
         [self dismissViewControllerAnimated:YES
                                  completion:nil];
     }
+    [self saveCurrentContext];
 }
 
 -(void)saveCurrentContext {

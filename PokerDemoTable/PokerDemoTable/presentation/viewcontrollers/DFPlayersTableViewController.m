@@ -8,6 +8,7 @@
 
 #import "DFPlayersTableViewController.h"
 #import "DFDataModelController.h"
+#import <SDImageCache.h>
 @interface DFPlayersTableViewController () <NSFetchedResultsControllerDelegate>
 @property (nonatomic, weak) DFDataModelController *dataModelController;
 @end
@@ -81,8 +82,21 @@ static NSString *const kRegistrationSegue = @"DFRegistrationSegue";
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     DFPlayer *player = [self.dataModelController.fetchedResultsController objectAtIndexPath:indexPath];
+    NSString *imageCacheName = [NSString stringWithFormat:@"%@_%@",player.firstName,player.lastNamae];
+    UIImage *cachedImageInMemory = [[SDImageCache sharedImageCache]imageFromMemoryCacheForKey:imageCacheName];
+    if (!cachedImageInMemory) {
+        [[SDImageCache sharedImageCache] queryDiskCacheForKey:imageCacheName
+                                                         done:^(UIImage *image, SDImageCacheType cacheType) {
+                                                             cell.imageView.image = image;
+                                                             [cell setNeedsLayout];
+                                                         }];
+    }
+    else {
+        cell.imageView.image =cachedImageInMemory;
+        [cell setNeedsLayout];
+    }
     cell.textLabel.text = [NSString stringWithFormat:@"%@ %@",player.firstName,player.lastNamae];
-    cell.imageView.image = [UIImage imageWithContentsOfFile:player.avatarPath];
+//    cell.imageView.image = [UIImage imageWithContentsOfFile:player.avatarPath];
 }
     
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
