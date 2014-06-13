@@ -11,6 +11,8 @@
 #import "DFPokerGame.h"
 #import "DFPokerHand.h"
 
+#import <math.h>
+
 static NSString *const kPokerHandCellId = @"DFPokerHandCell";
 static NSString *const kPokerTableSegue = @"DFPokerTableSegue";
 
@@ -42,7 +44,6 @@ static NSString *const kPokerTableSegue = @"DFPokerTableSegue";
             [self.tableView reloadData];
         }
     }];
-    
     self.tableView.editing = NO;
 }
 

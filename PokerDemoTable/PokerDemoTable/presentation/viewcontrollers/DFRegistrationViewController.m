@@ -107,7 +107,8 @@
     NSString *cacheKey = [NSString stringWithFormat:@"%@_%@",player.firstName,player.lastNamae];
     player.avatarPath = cacheKey;
     if (self.avatarImageView.image) {
-        [[SDImageCache sharedImageCache] storeImage:[UIImage imageWithImage:self.avatarImageView.image scaledToSize:CGSizeMake(50, 50)]
+        [[SDImageCache sharedImageCache] storeImage:[UIImage imageWithImage:self.avatarImageView.image
+                                                               scaledToSize:CGSizeMake(50, 50)]
                                              forKey:cacheKey
                                              toDisk:YES];
         [self dismissViewControllerAnimated:YES
