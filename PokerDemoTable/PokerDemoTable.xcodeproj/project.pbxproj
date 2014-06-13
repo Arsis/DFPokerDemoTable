@@ -15,6 +15,7 @@
 		A3B306B9194B13590033DC99 /* DFPlayerMove.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B306B8194B13590033DC99 /* DFPlayerMove.m */; };
 		A3B306BB194B17920033DC99 /* Scenarios.json in Resources */ = {isa = PBXBuildFile; fileRef = A3B306BA194B17920033DC99 /* Scenarios.json */; };
 		A3B306BE194B26FF0033DC99 /* DFPokerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B306BD194B26FF0033DC99 /* DFPokerTableViewController.m */; };
+		A3B306C1194B3D660033DC99 /* DFPlayersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B306C0194B3D660033DC99 /* DFPlayersTableViewCell.m */; };
 		A3C5CF6B194771E200D8F7CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C5CF6A194771E200D8F7CE /* Foundation.framework */; };
 		A3C5CF6D194771E200D8F7CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C5CF6C194771E200D8F7CE /* CoreGraphics.framework */; };
 		A3C5CF6F194771E200D8F7CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C5CF6E194771E200D8F7CE /* UIKit.framework */; };
@@ -63,6 +64,8 @@
 		A3B306BA194B17920033DC99 /* Scenarios.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Scenarios.json; sourceTree = "<group>"; };
 		A3B306BC194B26FF0033DC99 /* DFPokerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPokerTableViewController.h; sourceTree = "<group>"; };
 		A3B306BD194B26FF0033DC99 /* DFPokerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFPokerTableViewController.m; sourceTree = "<group>"; };
+		A3B306BF194B3D660033DC99 /* DFPlayersTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPlayersTableViewCell.h; sourceTree = "<group>"; };
+		A3B306C0194B3D660033DC99 /* DFPlayersTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFPlayersTableViewCell.m; sourceTree = "<group>"; };
 		A3C5CF67194771E200D8F7CE /* PokerDemoTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokerDemoTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C5CF6A194771E200D8F7CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A3C5CF6C194771E200D8F7CE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -237,6 +240,8 @@
 		A3C5CFA5194772BD00D8F7CE /* custom controls */ = {
 			isa = PBXGroup;
 			children = (
+				A3B306BF194B3D660033DC99 /* DFPlayersTableViewCell.h */,
+				A3B306C0194B3D660033DC99 /* DFPlayersTableViewCell.m */,
 			);
 			path = "custom controls";
 			sourceTree = "<group>";
@@ -435,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3B306C1194B3D660033DC99 /* DFPlayersTableViewCell.m in Sources */,
 				A3C5CF7B194771E200D8F7CE /* DFAppDelegate.m in Sources */,
 				A3D39CC41948B597000B10F2 /* DFDataModel.xcdatamodeld in Sources */,
 				A3C5CFB0194779B200D8F7CE /* DFRegistrationViewController.m in Sources */,

@@ -1,29 +1,154 @@
-{"scenarios" :
-    [{"scenario":
-	{
-		"name": "scenarioName",
-  		"id": "objectId",
-  		"numberOfPlayers" : 2,
- 	    "handStakes": {"smallBlind" : 50,
-  					   "bigBlind" : 100},
-  		"moveDelay" : 0.5,
-  		"playerMoves": [{"player 1" : {"command" : "call",
-  						"value" : 100}},
-  			        {"player 2" : {"command" : "raise",
-  						"value" : 200}}]
-	}
-},
-{"scenario": 
-	{
-		"name": "scenarioName",
-  		"id": "objectId",
-  		"numberOfPlayers" : 2,
- 	    "handStakes": {"smallBlind" : 50,
-  					   "bigBlind" : 100},
-  		"moveDelay" : 0.5,
-  		"playerMoves": [{"player 1" : {"command" : "call",
-  						"value" : 100}},
-  			        {"player 2" : {"command" : "raise",
-  						"value" : 200}}]
-	}
-}]}
+{"scenarios" : [{"scenario":
+                {
+                "name": "scenario1",
+                "id": "objectId",
+                "numberOfPlayers" : 2,
+                "handStakes": {"smallBlind" : 50,
+                "bigBlind" : 100},
+                "moveDelay" : 0.5,
+                "playerMoves": [{"player 1" : {"command" : "call",
+                                "value" : 200}},
+                                {"player 2" : {"command" : "raise",
+                                "value" : 200}}]
+                }
+                },
+                {"scenario":
+                {
+                "name": "scenario2",
+                "id": "objectId",
+                "numberOfPlayers" : 2,
+                "handStakes": {"smallBlind" : 1,
+                "bigBlind" : 2},
+                "moveDelay" : 0.5,
+                "playerMoves": [{"player 1" : {"command" : "call",
+                                "value" : 2}},
+                                {"player 2" : {"command" : "raise",
+                                "value" : 4}}]
+                }
+                },
+                {"scenario":
+                {
+                "name": "scenario3",
+                "id": "objectId",
+                "numberOfPlayers" : 3,
+                "handStakes": {"smallBlind" : 50,
+                "bigBlind" : 100},
+                "moveDelay" : 0.5,
+                "playerMoves": [{"player 1" : {"command" : "call",
+                                "value" : 200}},
+                                {"player 2" : {"command" : "raise",
+                                "value" : 200}}]
+                }
+                },
+                {"scenario":
+                {
+                "name": "scenario4",
+                "id": "objectId",
+                "numberOfPlayers" : 3,
+                "handStakes": {"smallBlind" : 50,
+                "bigBlind" : 100},
+                "moveDelay" : 0.5,
+                "playerMoves": [{"player 1" : {"command" : "call",
+                                "value" : 200}},
+                                {"player 2" : {"command" : "raise",
+                                "value" : 200}},
+                                {"player 3" : {"command" : "call",
+                                "value" : 200}},
+                                {"player 1" : {"command" : "call",
+                                "value" : 200}},
+                                {"player 2" : {"command" : "call",
+                                "value" : 200}},
+                                {"player 3" : {"command" : "call",
+                                "value" : 200}}]
+                }
+                },
+                {"scenario":
+                {
+                "name": "scenario5",
+                "id": "objectId",
+                "numberOfPlayers" : 4,
+                "handStakes": {"smallBlind" : 50,
+                "bigBlind" : 100},
+                "moveDelay" : 0.5,
+                "playerMoves": [{"player 1" : {"command" : "call",
+                                "value" : 200}},
+                                {"player 2" : {"command" : "raise",
+                                "value" : 200}},
+                                {"player 3" : {"command" : "call",
+                                "value" : 200}},
+                                {"player 4" : {"command" : "raise",
+                                "value" : 200}},
+                                {"player 1" : {"command" : "call",
+                                "value" : 200}},
+                                {"player 2" : {"command" : "raise",
+                                "value" : 200}},
+                                {"player 3" : {"command" : "call",
+                                "value" : 200}},
+                                {"player 4" : {"command" : "raise",
+                                "value" : 200}},
+                                {"player 1" : {"command" : "call",
+                                "value" : 200}},
+                                {"player 2" : {"command" : "raise",
+                                "value" : 200}},
+                                {"player 3" : {"command" : "call",
+                                "value" : 200}},
+                                {"player 4" : {"command" : "raise",
+                                "value" : 200}}]
+                }
+                },
+                {"scenario": 
+                {
+                "name": "scenario6",
+                "id": "objectId",
+                "numberOfPlayers" : 2,
+                "handStakes": {"smallBlind" : 50,
+                "bigBlind" : 100},
+                "moveDelay" : 0.5,
+                "playerMoves": [{"player 1" : {"command" : "call",
+                                "value" : 200}},
+                                {"player 2" : {"command" : "raise",
+                                "value" : 200}}]
+                }
+                }
+                ,{"scenario": 
+                {
+                "name": "scenario7",
+                "id": "objectId",
+                "numberOfPlayers" : 2,
+                "handStakes": {"smallBlind" : 50,
+                "bigBlind" : 100},
+                "moveDelay" : 0.5,
+                "playerMoves": [{"player 1" : {"command" : "call",
+                                "value" : 200}},
+                                {"player 2" : {"command" : "raise",
+                                "value" : 200}}]
+                }
+                }
+                ,{"scenario": 
+                {
+                "name": "scenario8",
+                "id": "objectId",
+                "numberOfPlayers" : 2,
+                "handStakes": {"smallBlind" : 50,
+                "bigBlind" : 100},
+                "moveDelay" : 0.5,
+                "playerMoves": [{"player 1" : {"command" : "call",
+                                "value" : 200}},
+                                {"player 2" : {"command" : "raise",
+                                "value" : 200}}]
+                }
+                }
+                ,{"scenario": 
+                {
+                "name": "scenario9",
+                "id": "objectId",
+                "numberOfPlayers" : 2,
+                "handStakes": {"smallBlind" : 50,
+                "bigBlind" : 100},
+                "moveDelay" : 0.5,
+                "playerMoves": [{"player 1" : {"command" : "call",
+                                "value" : 200}},
+                                {"player 2" : {"command" : "raise",
+                                "value" : 200}}]
+                }
+                }]}

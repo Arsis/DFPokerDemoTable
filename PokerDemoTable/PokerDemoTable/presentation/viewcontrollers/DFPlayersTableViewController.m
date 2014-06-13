@@ -10,6 +10,7 @@
 #import "DFDataModelController.h"
 #import "DFPokerGame.h"
 #import <SDImageCache.h>
+#import "DFPlayersTableViewCell.h"
 @interface DFPlayersTableViewController () <NSFetchedResultsControllerDelegate>
 @property (nonatomic, weak) DFDataModelController *dataModelController;
 @property (nonatomic, strong) DFPokerGame *nextGame;
@@ -73,8 +74,10 @@ static NSString *const kDFPokerHandsSegue = @"DFPokerHandsSegue";
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSManagedObject *object = [self.dataModelController.fetchedResultsController objectAtIndexPath:indexPath];
-        [self.dataModelController.mainContext deleteObject:object];
+        DFPlayer *player = [self.dataModelController.fetchedResultsController objectAtIndexPath:indexPath];
+        [[SDImageCache sharedImageCache] removeImageForKey:player.avatarPath
+                                                  fromDisk:YES];
+        [self.dataModelController.mainContext deleteObject:player];
         NSError *error;
         if ([self.dataModelController.mainContext save:&error] == NO) {
             NSLog(@"error occured: %@",error.localizedDescription);
@@ -83,26 +86,32 @@ static NSString *const kDFPokerHandsSegue = @"DFPokerHandsSegue";
     }
 }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+- (void)configureCell:(DFPlayersTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     DFPlayer *player = [self.dataModelController.fetchedResultsController objectAtIndexPath:indexPath];
     UIImage *cachedImageInMemory = [[SDImageCache sharedImageCache]imageFromMemoryCacheForKey:player.avatarPath];
     if (!cachedImageInMemory) {
         [[SDImageCache sharedImageCache] queryDiskCacheForKey:player.avatarPath
                                                          done:^(UIImage *image, SDImageCacheType cacheType) {
-                                                             cell.imageView.image = image;
+                                                             if (image) {
+                                                                 cell.avatarImageView.image = image;
+                                                             }
+                                                             else {
+                                                                 cell.avatarImageView.image = [UIImage imageNamed:@"avatarPlaceholder"];
+                                                             }
                                                              [cell setNeedsLayout];
                                                          }];
     }
     else {
-        cell.imageView.image =cachedImageInMemory;
+        cell.avatarImageView.image =cachedImageInMemory;
         [cell setNeedsLayout];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@",player.firstName,player.lastNamae];
+    cell.firstNameLabel.text = player.firstName;
+    cell.lastNameLabel.text = player.lastNamae;
 }
     
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"PlayerCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    DFPlayersTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
@@ -116,14 +125,14 @@ static NSString *const kDFPokerHandsSegue = @"DFPokerHandsSegue";
     if (!self.nextGame) {
         self.nextGame = [DFPokerGame sharedGame];
     }
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    DFPlayersTableViewCell *cell = (DFPlayersTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
     if ([self.nextGame.players containsObject:player]) {
         [self.nextGame removePlayer:player];
-        cell.accessoryType = UITableViewCellAccessoryNone;
+        cell.disclosureIndicator.hidden = YES;
     }
     else {
         [self.nextGame addPlayer:player];
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        cell.disclosureIndicator.hidden = NO;
     }
     
     if (self.nextGame.players.count >= 2) {
@@ -158,7 +167,7 @@ static NSString *const kDFPokerHandsSegue = @"DFPokerHandsSegue";
             break;
             
         case NSFetchedResultsChangeUpdate:
-            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            [self configureCell:(DFPlayersTableViewCell *)[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
             break;
             
         case NSFetchedResultsChangeMove:
