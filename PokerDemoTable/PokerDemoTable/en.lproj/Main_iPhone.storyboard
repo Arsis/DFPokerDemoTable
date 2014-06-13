@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="K9r-Y1-q2v">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="K9r-Y1-q2v">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -30,6 +30,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Players" id="J4W-y9-5Lr">
+                        <barButtonItem key="leftBarButtonItem" enabled="NO" title="Poker hands" id="vzq-TK-sRu">
+                            <connections>
+                                <action selector="pokerHandsButtonPressed:" destination="Kmh-dm-LHb" id="ejd-E2-m9A"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="aog-3w-Iaz">
                             <connections>
                                 <action selector="addPlayerButtonPressed:" destination="Kmh-dm-LHb" id="Ayw-DU-7u4"/>
@@ -37,12 +42,82 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="pokerHandsButton" destination="vzq-TK-sRu" id="NkB-Vs-apf"/>
                         <segue destination="qy6-vY-rRH" kind="modal" identifier="DFRegistrationSegue" id="bOs-cW-dXW"/>
+                        <segue destination="mPc-KZ-AyS" kind="push" identifier="DFPokerHandsSegue" id="DfB-av-EwL"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LoR-tB-r2i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="519" y="151"/>
+        </scene>
+        <!--Poker Hands Table View Controller - Poker hands-->
+        <scene sceneID="gIC-SS-ZJ2">
+            <objects>
+                <tableViewController id="mPc-KZ-AyS" customClass="DFPokerHandsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5G1-Xm-WsW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DFPokerHandCell" id="U3j-TB-8Pr">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U3j-TB-8Pr" id="sli-K9-2ae">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mPc-KZ-AyS" id="Lz7-b1-sMM"/>
+                            <outlet property="delegate" destination="mPc-KZ-AyS" id="91n-Hr-tYE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Poker hands" id="3xa-iQ-5St"/>
+                    <connections>
+                        <segue destination="rS2-ZT-IY3" kind="push" identifier="DFPokerTableSegue" id="g92-eL-nds"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iHJ-Y2-q08" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989" y="151"/>
+        </scene>
+        <!--Poker Table View Controller - Poker table-->
+        <scene sceneID="3L3-I6-gnN">
+            <objects>
+                <viewController id="rS2-ZT-IY3" customClass="DFPokerTableViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Qj-44-6Hy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8dU-3b-ssR">
+                                <rect key="frame" x="101" y="269" width="119" height="30"/>
+                                <state key="normal" title="Play/Pause">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playOrPauseButtonPressed:" destination="rS2-ZT-IY3" eventType="touchUpInside" id="H9S-AT-udK"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="whj-fs-aB1">
+                                <rect key="frame" x="40" y="101" width="240" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Poker table" id="iV3-hE-bEh"/>
+                    <connections>
+                        <outlet property="textView" destination="whj-fs-aB1" id="HBo-ZQ-mKB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G9s-dE-N1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1417" y="151"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="Erx-zX-d0d">
@@ -100,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eCi-yS-w6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="909" y="151"/>
+            <point key="canvasLocation" x="989" y="-557"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hfe-ag-jxb">

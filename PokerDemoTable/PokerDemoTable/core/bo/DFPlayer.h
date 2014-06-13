@@ -1,5 +1,5 @@
 #import "_DFPlayer.h"
 
-@interface DFPlayer : _DFPlayer {}
+@interface DFPlayer : _DFPlayer <NSObject> {}
 
 @end

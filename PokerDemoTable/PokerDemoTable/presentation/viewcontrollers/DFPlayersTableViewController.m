@@ -8,13 +8,16 @@
 
 #import "DFPlayersTableViewController.h"
 #import "DFDataModelController.h"
+#import "DFPokerGame.h"
 #import <SDImageCache.h>
 @interface DFPlayersTableViewController () <NSFetchedResultsControllerDelegate>
 @property (nonatomic, weak) DFDataModelController *dataModelController;
+@property (nonatomic, strong) DFPokerGame *nextGame;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *pokerHandsButton;
 @end
 
 static NSString *const kRegistrationSegue = @"DFRegistrationSegue";
-
+static NSString *const kDFPokerHandsSegue = @"DFPokerHandsSegue";
 @implementation DFPlayersTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -82,10 +85,9 @@ static NSString *const kRegistrationSegue = @"DFRegistrationSegue";
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     DFPlayer *player = [self.dataModelController.fetchedResultsController objectAtIndexPath:indexPath];
-    NSString *cacheKey = [NSString stringWithFormat:@"%@_%@",player.firstName,player.lastNamae];
-    UIImage *cachedImageInMemory = [[SDImageCache sharedImageCache]imageFromMemoryCacheForKey:cacheKey];
+    UIImage *cachedImageInMemory = [[SDImageCache sharedImageCache]imageFromMemoryCacheForKey:player.avatarPath];
     if (!cachedImageInMemory) {
-        [[SDImageCache sharedImageCache] queryDiskCacheForKey:cacheKey
+        [[SDImageCache sharedImageCache] queryDiskCacheForKey:player.avatarPath
                                                          done:^(UIImage *image, SDImageCacheType cacheType) {
                                                              cell.imageView.image = image;
                                                              [cell setNeedsLayout];
@@ -96,7 +98,6 @@ static NSString *const kRegistrationSegue = @"DFRegistrationSegue";
         [cell setNeedsLayout];
     }
     cell.textLabel.text = [NSString stringWithFormat:@"%@ %@",player.firstName,player.lastNamae];
-//    cell.imageView.image = [UIImage imageWithContentsOfFile:player.avatarPath];
 }
     
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -111,13 +112,25 @@ static NSString *const kRegistrationSegue = @"DFRegistrationSegue";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath
                              animated:YES];
-//    DFPlayer *player = [self.dataModelController.fetchedResultsController objectAtIndexPath:indexPath];
+    DFPlayer *player = [self.dataModelController.fetchedResultsController objectAtIndexPath:indexPath];
+    if (!self.nextGame) {
+        self.nextGame = [DFPokerGame sharedGame];
+    }
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    if (cell.accessoryType == UITableViewCellAccessoryNone) {
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    if ([self.nextGame.players containsObject:player]) {
+        [self.nextGame removePlayer:player];
+        cell.accessoryType = UITableViewCellAccessoryNone;
     }
     else {
-        cell.accessoryType = UITableViewCellAccessoryNone;
+        [self.nextGame addPlayer:player];
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    
+    if (self.nextGame.players.count >= 2) {
+        self.pokerHandsButton.enabled = YES;
+    }
+    else {
+        self.pokerHandsButton.enabled = NO;
     }
 }
 
@@ -158,6 +171,11 @@ static NSString *const kRegistrationSegue = @"DFRegistrationSegue";
 }
 
 #pragma mark - Target/Action
+
+- (IBAction)pokerHandsButtonPressed:(id)sender {
+    [self performSegueWithIdentifier:kDFPokerHandsSegue
+                              sender:self];
+}
 
 - (IBAction)addPlayerButtonPressed:(id)sender {
     [self performSegueWithIdentifier:kRegistrationSegue

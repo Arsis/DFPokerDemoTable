@@ -10,5 +10,6 @@
 
 @interface DFPlayersTableViewController : UITableViewController
 
+- (IBAction)pokerHandsButtonPressed:(id)sender;
 - (IBAction)addPlayerButtonPressed:(id)sender;
 @end

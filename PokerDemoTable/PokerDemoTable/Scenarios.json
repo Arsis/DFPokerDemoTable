@@ -1,0 +1,29 @@
+{"scenarios" :
+    [{"scenario":
+	{
+		"name": "scenarioName",
+  		"id": "objectId",
+  		"numberOfPlayers" : 2,
+ 	    "handStakes": {"smallBlind" : 50,
+  					   "bigBlind" : 100},
+  		"moveDelay" : 0.5,
+  		"playerMoves": [{"player 1" : {"command" : "call",
+  						"value" : 100}},
+  			        {"player 2" : {"command" : "raise",
+  						"value" : 200}}]
+	}
+},
+{"scenario": 
+	{
+		"name": "scenarioName",
+  		"id": "objectId",
+  		"numberOfPlayers" : 2,
+ 	    "handStakes": {"smallBlind" : 50,
+  					   "bigBlind" : 100},
+  		"moveDelay" : 0.5,
+  		"playerMoves": [{"player 1" : {"command" : "call",
+  						"value" : 100}},
+  			        {"player 2" : {"command" : "raise",
+  						"value" : 200}}]
+	}
+}]}
