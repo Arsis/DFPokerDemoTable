@@ -36,15 +36,50 @@ static NSString *const kPokerTableSegue = @"DFPokerTableSegue";
 {
     [super viewDidLoad];
     self.game = [DFPokerGame sharedGame];
+    
+    [self downloadConent];
+    self.tableView.editing = NO;
+}
+
+- (void)downloadConent
+{
+    [self setupActivityIndicator];
     DFPokerHandManager *pokerHandManager = [[DFPokerHandManager alloc]init];
     typeof (self) weakSelf = self;
     [pokerHandManager downloadScenariosWithCompletionHandler:^(NSArray *scenarios, NSError *error) {
         if (!error) {
             weakSelf.availablePokerHands = [pokerHandManager availablePokerHandsWithNumberOfPlayers:self.game.players.count];
+            self.navigationItem.rightBarButtonItem = nil;
             [self.tableView reloadData];
         }
+        else {
+            UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Something went wrong"
+                                                               message:@"please reload later"
+                                                              delegate:nil
+                                                     cancelButtonTitle:@"OK"
+                                                     otherButtonTitles:nil, nil];
+            [alertView show];
+            [self setupRefreshButton];
+        }
     }];
-    self.tableView.editing = NO;
+}
+
+- (void)setupActivityIndicator
+{
+    self.navigationItem.rightBarButtonItem = nil;
+    UIActivityIndicatorView *activityIndicatorView = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    
+    UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc]initWithCustomView:activityIndicatorView];
+    [activityIndicatorView startAnimating];
+    self.navigationItem.rightBarButtonItem = barButtonItem;
+}
+
+-(void)setupRefreshButton {
+    self.navigationItem.rightBarButtonItem = nil;
+    UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
+                                                                                  target:self
+                                                                                  action:@selector(downloadConent)];
+    self.navigationItem.rightBarButtonItem = barButtonItem;
 }
 
 -(void)viewWillAppear:(BOOL)animated {

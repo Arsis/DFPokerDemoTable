@@ -52,7 +52,6 @@ static NSString *const kHostName = @"cs539420.vk.me";
     }
     else {
         NSString *filePath = @"/u121786827/docs/2b04211c607d/Scenarios.json";
-//        NSString *filePath = @"doc121786827_307880682";
         [self.connector downloadDataWithURLString:[NSString stringWithFormat:@"http://%@/%@",kHostName,filePath]];
     }
 }
