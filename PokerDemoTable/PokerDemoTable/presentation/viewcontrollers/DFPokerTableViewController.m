@@ -15,6 +15,9 @@
 #import "DFGradientManager.h"
 #import "DFPlayerView.h"
 #import "DFPokerHand.h"
+
+static CGFloat const kRadius = 130.0f;
+
 @interface DFPokerTableViewController ()
 @property (nonatomic, weak) DFPokerGame *currentGame;
 @property (nonatomic, strong) id playerMoveObserver;
@@ -36,14 +39,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     CAGradientLayer *greenGradientLayer = [DFGradientManager greenGradient];
     greenGradientLayer.frame = self.view.bounds;
     [self.view.layer insertSublayer:greenGradientLayer
                             atIndex:0];
+    
     self.currentGame = [DFPokerGame sharedGame];
     CGFloat angle = 2 * M_PI / (double)self.currentGame.players.count;
-    CGFloat radius = 130.0f;
-    CGPoint center = CGPointMake(self.view.center.x, self.view.center.y + 40);
+    CGFloat radius = kRadius;
+    CGPoint center = CGPointMake(self.view.center.x, self.view.center.y);
     
     self.playerViews = [NSMutableArray arrayWithCapacity:self.currentGame.players.count];
     

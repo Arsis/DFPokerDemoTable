@@ -11,6 +11,7 @@
 @interface DFConnector () <NSURLConnectionDataDelegate>
 @property (nonatomic, strong) NSURLConnection *connection;
 @property (nonatomic, strong) NSURLSession *session;
+@property (nonatomic, strong) NSMutableData *dataBuffer;
 @end
 
 @implementation DFConnector
@@ -55,11 +56,27 @@
 }
 
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    [self.delegate connectorDidFailWithError:error];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.dataBuffer = nil;
+        [self.delegate connectorDidFailWithError:error];
+    });
 }
 
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    [self parseData:data];
+    if (!self.dataBuffer) {
+        self.dataBuffer = [NSMutableData dataWithData:data];
+    }
+    else {
+        [self.dataBuffer appendData:data];
+    }
+}
+
+-(void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.dataBuffer.length > 0) {
+            [self parseData:self.dataBuffer];
+        }
+    });
 }
 
 #pragma mark - Parsing

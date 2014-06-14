@@ -11,6 +11,14 @@
 #import "UIImage+Resizing.h"
 #import <SDImageCache.h>
 @import QuartzCore;
+
+static CGFloat const kDefaultNavigationBarHeight = 44.0f;
+static CGFloat const kNavigationBarHeightIOS7 = 64.0f;
+static CGFloat const kDefaultAvatarDimensions = 50.0f;
+static CGFloat const kAnimationDistance = 5.0f;
+static CGFloat const kAnimationSpeed = 10.0f;
+static NSUInteger const kAnimationRepeatCount = 3;
+
 @interface DFRegistrationViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UINavigationBarDelegate, UITextFieldDelegate>
 @property (nonatomic, weak) NSManagedObjectContext *currentContext;
 @property (nonatomic, weak) UINavigationItem *currentNavigationItem;
@@ -44,8 +52,8 @@
 }
 
 - (void)setupNavigationBar  {
-    CGFloat navBarHeight = NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1 ? 64 : 44;
-    UINavigationBar *navigationBar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, 320, navBarHeight)];
+    CGFloat navBarHeight = NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1 ? kNavigationBarHeightIOS7 : kDefaultNavigationBarHeight;
+    UINavigationBar *navigationBar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), navBarHeight)];
     [navigationBar setDelegate:self];
     UINavigationItem *navigationItem = [[UINavigationItem alloc]initWithTitle:@"Registration"];
     UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Cancel"
@@ -108,7 +116,7 @@
     player.avatarPath = cacheKey;
     if (self.avatarImageView.image) {
         [[SDImageCache sharedImageCache] storeImage:[UIImage imageWithImage:self.avatarImageView.image
-                                                               scaledToSize:CGSizeMake(50, 50)]
+                                                               scaledToSize:CGSizeMake(kDefaultAvatarDimensions, kDefaultAvatarDimensions)]
                                              forKey:cacheKey
                                              toDisk:YES];
         [self dismissViewControllerAnimated:YES
@@ -160,9 +168,9 @@
     if (textField.text.length == 0) {
         CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
         animation.autoreverses = YES;
-        animation.speed = 10.0f;
-        animation.repeatCount = 3;
-        animation.toValue = [NSValue valueWithCGPoint:CGPointMake(CGRectGetMidX(textField.frame) + 5, CGRectGetMidY(textField.frame))];
+        animation.speed = kAnimationSpeed;
+        animation.repeatCount = kAnimationRepeatCount;
+        animation.toValue = [NSValue valueWithCGPoint:CGPointMake(CGRectGetMidX(textField.frame) + kAnimationDistance, CGRectGetMidY(textField.frame))];
         [textField.layer addAnimation:animation forKey:nil];
         [textField becomeFirstResponder];
         return NO;

@@ -11,6 +11,9 @@
 #import "DFPokerGame.h"
 #import <SDImageCache.h>
 #import "DFPlayersTableViewCell.h"
+
+static NSUInteger const kMinPlayers = 2;
+
 @interface DFPlayersTableViewController () <NSFetchedResultsControllerDelegate>
 @property (nonatomic, weak) DFDataModelController *dataModelController;
 @property (nonatomic, strong) DFPokerGame *nextGame;
@@ -105,6 +108,12 @@ static NSString *const kDFPokerHandsSegue = @"DFPokerHandsSegue";
         cell.avatarImageView.image =cachedImageInMemory;
         [cell setNeedsLayout];
     }
+    if ([self.nextGame.players containsObject:player]) {
+        cell.disclosureIndicator.hidden = NO;
+    }
+    else {
+        cell.disclosureIndicator.hidden = YES;
+    }
     cell.firstNameLabel.text = player.firstName;
     cell.lastNameLabel.text = player.lastNamae;
 }
@@ -116,7 +125,7 @@ static NSString *const kDFPokerHandsSegue = @"DFPokerHandsSegue";
     return cell;
 }
 
-#pragma mark - UITableViewDelegate 
+#pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath
@@ -126,14 +135,7 @@ static NSString *const kDFPokerHandsSegue = @"DFPokerHandsSegue";
         self.nextGame = [DFPokerGame sharedGame];
     }
     DFPlayersTableViewCell *cell = (DFPlayersTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
-    if ([self.nextGame.players containsObject:player]) {
-        [self.nextGame removePlayer:player];
-        cell.disclosureIndicator.hidden = YES;
-    }
-    else {
-        [self.nextGame addPlayer:player];
-        cell.disclosureIndicator.hidden = NO;
-    }
+    [self refreshDisclosureIndicatorInCell:cell player:player];
     
     [self refreshButtonState];
 }
@@ -189,11 +191,22 @@ static NSString *const kDFPokerHandsSegue = @"DFPokerHandsSegue";
 #pragma mark - Etc
 
 - (void)refreshButtonState {
-    if (self.nextGame.players.count >= 2) {
+    if (self.nextGame.players.count >= kMinPlayers) {
         self.pokerHandsButton.enabled = YES;
     }
     else {
         self.pokerHandsButton.enabled = NO;
+    }
+}
+
+- (void)refreshDisclosureIndicatorInCell:(DFPlayersTableViewCell *)cell player:(DFPlayer *)player {
+    if ([self.nextGame.players containsObject:player]) {
+        [self.nextGame removePlayer:player];
+        cell.disclosureIndicator.hidden = YES;
+    }
+    else {
+        [self.nextGame addPlayer:player];
+        cell.disclosureIndicator.hidden = NO;
     }
 }
 
