@@ -4,25 +4,35 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-Reachability.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SDWebImage.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3544427C1D164F11AD03D48D</key>
+		<key>5438DAD3141D4BF5B8048FE7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7F7086B0C7164833AE2B2105</key>
+		<key>56E4FF0AC1F14E52AD5F0ACC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>761E565DEA40452786C2762C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

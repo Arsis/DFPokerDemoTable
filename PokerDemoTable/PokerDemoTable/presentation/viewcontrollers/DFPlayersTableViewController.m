@@ -47,10 +47,6 @@ static NSString *const kDFPokerHandsSegue = @"DFPokerHandsSegue";
 	}
 }
 
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -77,6 +73,10 @@ static NSString *const kDFPokerHandsSegue = @"DFPokerHandsSegue";
         DFPlayer *player = [self.dataModelController.fetchedResultsController objectAtIndexPath:indexPath];
         [[SDImageCache sharedImageCache] removeImageForKey:player.avatarPath
                                                   fromDisk:YES];
+        if ([self.nextGame.players containsObject:player]) {
+            [self.nextGame removePlayer:player];
+            [self refreshButtonState];
+        }
         [self.dataModelController.mainContext deleteObject:player];
         NSError *error;
         if ([self.dataModelController.mainContext save:&error] == NO) {
@@ -135,12 +135,7 @@ static NSString *const kDFPokerHandsSegue = @"DFPokerHandsSegue";
         cell.disclosureIndicator.hidden = NO;
     }
     
-    if (self.nextGame.players.count >= 2) {
-        self.pokerHandsButton.enabled = YES;
-    }
-    else {
-        self.pokerHandsButton.enabled = NO;
-    }
+    [self refreshButtonState];
 }
 
 #pragma mark - NSFetchedResultsControllerDelegate
@@ -190,4 +185,16 @@ static NSString *const kDFPokerHandsSegue = @"DFPokerHandsSegue";
     [self performSegueWithIdentifier:kRegistrationSegue
                               sender:self];
 }
+
+#pragma mark - Etc
+
+- (void)refreshButtonState {
+    if (self.nextGame.players.count >= 2) {
+        self.pokerHandsButton.enabled = YES;
+    }
+    else {
+        self.pokerHandsButton.enabled = NO;
+    }
+}
+
 @end

@@ -1,12 +1,15 @@
 PODS:
+  - Reachability (3.1.1)
   - SDWebImage (3.6):
     - SDWebImage/Core
   - SDWebImage/Core (3.6)
 
 DEPENDENCIES:
+  - Reachability (~> 3.1.1)
   - SDWebImage (~> 3.6)
 
 SPEC CHECKSUMS:
+  Reachability: 8e9635e3cb4f98e7f825e51147f677ecc694d0e7
   SDWebImage: c6989652c1cdf27cbdf3f56957e2030f825af5bc
 
 COCOAPODS: 0.33.1

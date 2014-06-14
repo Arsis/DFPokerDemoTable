@@ -14,4 +14,5 @@
 @property (nonatomic) double value;
 - (instancetype)initWithDictionary:(NSDictionary *)dict;
 + (instancetype)playerMoveWithDictionary:(NSDictionary *)dict;
+- (NSUInteger)playerIndex;
 @end

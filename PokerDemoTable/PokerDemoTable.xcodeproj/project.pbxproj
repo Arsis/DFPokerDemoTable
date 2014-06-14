@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3F89215C3D1B4AC8BA1BD77F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FBCBACC3C14A0E90B45B9E /* libPods.a */; };
+		A3B2E085194C180000528E82 /* DFConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B2E084194C180000528E82 /* DFConnector.m */; };
+		A3B2E088194C3F8800528E82 /* DFGradientManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B2E087194C3F8800528E82 /* DFGradientManager.m */; };
+		A3B2E08B194C545600528E82 /* DFPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B2E08A194C545600528E82 /* DFPlayerView.m */; };
 		A3B306AD194ADBD60033DC99 /* DFPokerGame.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B306AC194ADBD60033DC99 /* DFPokerGame.m */; };
 		A3B306B0194AFCC40033DC99 /* DFPokerHand.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B306AF194AFCC40033DC99 /* DFPokerHand.m */; };
 		A3B306B3194AFD140033DC99 /* DFPokerHandManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B306B2194AFD140033DC99 /* DFPokerHandManager.m */; };
@@ -51,6 +54,12 @@
 /* Begin PBXFileReference section */
 		25ABB5E8CC7B4C00907EC67B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		44FBCBACC3C14A0E90B45B9E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3B2E083194C180000528E82 /* DFConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFConnector.h; sourceTree = "<group>"; };
+		A3B2E084194C180000528E82 /* DFConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFConnector.m; sourceTree = "<group>"; };
+		A3B2E086194C3F8800528E82 /* DFGradientManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFGradientManager.h; sourceTree = "<group>"; };
+		A3B2E087194C3F8800528E82 /* DFGradientManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFGradientManager.m; sourceTree = "<group>"; };
+		A3B2E089194C545600528E82 /* DFPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPlayerView.h; sourceTree = "<group>"; };
+		A3B2E08A194C545600528E82 /* DFPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFPlayerView.m; sourceTree = "<group>"; };
 		A3B306AB194ADBD60033DC99 /* DFPokerGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPokerGame.h; sourceTree = "<group>"; };
 		A3B306AC194ADBD60033DC99 /* DFPokerGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFPokerGame.m; sourceTree = "<group>"; };
 		A3B306AE194AFCC40033DC99 /* DFPokerHand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPokerHand.h; sourceTree = "<group>"; };
@@ -240,6 +249,10 @@
 		A3C5CFA5194772BD00D8F7CE /* custom controls */ = {
 			isa = PBXGroup;
 			children = (
+				A3B2E086194C3F8800528E82 /* DFGradientManager.h */,
+				A3B2E087194C3F8800528E82 /* DFGradientManager.m */,
+				A3B2E089194C545600528E82 /* DFPlayerView.h */,
+				A3B2E08A194C545600528E82 /* DFPlayerView.m */,
 				A3B306BF194B3D660033DC99 /* DFPlayersTableViewCell.h */,
 				A3B306C0194B3D660033DC99 /* DFPlayersTableViewCell.m */,
 			);
@@ -282,6 +295,8 @@
 		A3C5CFA9194772DB00D8F7CE /* network */ = {
 			isa = PBXGroup;
 			children = (
+				A3B2E083194C180000528E82 /* DFConnector.h */,
+				A3B2E084194C180000528E82 /* DFConnector.m */,
 				A3B306B1194AFD140033DC99 /* DFPokerHandManager.h */,
 				A3B306B2194AFD140033DC99 /* DFPokerHandManager.m */,
 			);
@@ -440,12 +455,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3B2E085194C180000528E82 /* DFConnector.m in Sources */,
 				A3B306C1194B3D660033DC99 /* DFPlayersTableViewCell.m in Sources */,
 				A3C5CF7B194771E200D8F7CE /* DFAppDelegate.m in Sources */,
 				A3D39CC41948B597000B10F2 /* DFDataModel.xcdatamodeld in Sources */,
 				A3C5CFB0194779B200D8F7CE /* DFRegistrationViewController.m in Sources */,
 				A3B306AD194ADBD60033DC99 /* DFPokerGame.m in Sources */,
 				A3D39CCF1948BF95000B10F2 /* _DFPlayer.m in Sources */,
+				A3B2E088194C3F8800528E82 /* DFGradientManager.m in Sources */,
 				A3B306B0194AFCC40033DC99 /* DFPokerHand.m in Sources */,
 				A3D39CD01948BF95000B10F2 /* DFPlayer.m in Sources */,
 				A3B306B9194B13590033DC99 /* DFPlayerMove.m in Sources */,
@@ -456,6 +473,7 @@
 				A3C5CF77194771E200D8F7CE /* main.m in Sources */,
 				A3D39CC11948B560000B10F2 /* DFDataModelController.m in Sources */,
 				A3B306B6194AFEA20033DC99 /* DFPokerHandsTableViewController.m in Sources */,
+				A3B2E08B194C545600528E82 /* DFPlayerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,4 +24,10 @@
     return [[[self class] alloc]initWithDictionary:dict];
 }
 
+- (NSUInteger)playerIndex {
+    NSRange whiteSpaceRange = [_player rangeOfString:@" "];
+    NSString *numberString = [_player substringFromIndex:whiteSpaceRange.location + 1];
+    return [numberString integerValue];
+}
+
 @end
