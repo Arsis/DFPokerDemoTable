@@ -52,7 +52,7 @@
 #pragma mark - NSURLConnectionDelegate
 
 -(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response     {
-    NSLog(@"received response with status code %d",((NSHTTPURLResponse *)response).statusCode);
+    NSLog(@"received response with status code %d",(int)((NSHTTPURLResponse *)response).statusCode);
 }
 
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {

@@ -53,7 +53,7 @@ static CGFloat const kRadius = 130.0f;
     self.playerViews = [NSMutableArray arrayWithCapacity:self.currentGame.players.count];
     
     NSArray *players = [[self.currentGame players] allObjects];
-    for (int i = players.count - 1; i >= 0; i--) {
+    for (int i = (int)players.count - 1; i >= 0; i--) {
         DFPlayer *player = players[i];
         DFPlayerView *view = [[DFPlayerView alloc]initWithPlayer:player];
         [self.playerViews addObject:view];
