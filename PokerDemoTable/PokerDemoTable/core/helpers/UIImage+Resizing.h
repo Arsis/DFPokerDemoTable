@@ -10,4 +10,5 @@
 
 @interface UIImage (Resizing)
 + (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize;
++ (UIView *)imageViewWithGradient:(CAGradientLayer *)gradient size:(CGSize)size text:(NSString *)text;
 @end

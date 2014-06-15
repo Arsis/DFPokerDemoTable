@@ -11,7 +11,6 @@
 #import "DFPokerGame.h"
 #import <SDImageCache.h>
 #import "DFPlayersTableViewCell.h"
-
 static NSUInteger const kMinPlayers = 2;
 
 @interface DFPlayersTableViewController () <NSFetchedResultsControllerDelegate>
@@ -32,6 +31,7 @@ static NSString *const kDFPokerHandsSegue = @"DFPokerHandsSegue";
     }
     return self;
 }
+
 
 - (void)viewDidLoad
 {

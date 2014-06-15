@@ -33,6 +33,7 @@
 		A3C5CF99194771E300D8F7CE /* PokerDemoTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C5CF98194771E300D8F7CE /* PokerDemoTableTests.m */; };
 		A3C5CFAD1947779200D8F7CE /* DFPlayersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C5CFAC1947779200D8F7CE /* DFPlayersTableViewController.m */; };
 		A3C5CFB0194779B200D8F7CE /* DFRegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C5CFAF194779B200D8F7CE /* DFRegistrationViewController.m */; };
+		A3C7CBC0194E067C00B25725 /* DFPokerHandTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C7CBBF194E067C00B25725 /* DFPokerHandTableViewCell.m */; };
 		A3D39CC11948B560000B10F2 /* DFDataModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D39CC01948B560000B10F2 /* DFDataModelController.m */; };
 		A3D39CC41948B597000B10F2 /* DFDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3D39CC21948B597000B10F2 /* DFDataModel.xcdatamodeld */; };
 		A3D39CCF1948BF95000B10F2 /* _DFPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D39CCC1948BF95000B10F2 /* _DFPlayer.m */; };
@@ -96,6 +97,8 @@
 		A3C5CFAC1947779200D8F7CE /* DFPlayersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFPlayersTableViewController.m; sourceTree = "<group>"; };
 		A3C5CFAE194779B200D8F7CE /* DFRegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFRegistrationViewController.h; sourceTree = "<group>"; };
 		A3C5CFAF194779B200D8F7CE /* DFRegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFRegistrationViewController.m; sourceTree = "<group>"; };
+		A3C7CBBE194E067C00B25725 /* DFPokerHandTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPokerHandTableViewCell.h; sourceTree = "<group>"; };
+		A3C7CBBF194E067C00B25725 /* DFPokerHandTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFPokerHandTableViewCell.m; sourceTree = "<group>"; };
 		A3D39CBF1948B560000B10F2 /* DFDataModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFDataModelController.h; sourceTree = "<group>"; };
 		A3D39CC01948B560000B10F2 /* DFDataModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFDataModelController.m; sourceTree = "<group>"; };
 		A3D39CC31948B597000B10F2 /* DFDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DFDataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -249,6 +252,8 @@
 		A3C5CFA5194772BD00D8F7CE /* custom controls */ = {
 			isa = PBXGroup;
 			children = (
+				A3C7CBBE194E067C00B25725 /* DFPokerHandTableViewCell.h */,
+				A3C7CBBF194E067C00B25725 /* DFPokerHandTableViewCell.m */,
 				A3B2E086194C3F8800528E82 /* DFGradientManager.h */,
 				A3B2E087194C3F8800528E82 /* DFGradientManager.m */,
 				A3B2E089194C545600528E82 /* DFPlayerView.h */,
@@ -469,6 +474,7 @@
 				A3C5CFAD1947779200D8F7CE /* DFPlayersTableViewController.m in Sources */,
 				A3B306B3194AFD140033DC99 /* DFPokerHandManager.m in Sources */,
 				A3B306BE194B26FF0033DC99 /* DFPokerTableViewController.m in Sources */,
+				A3C7CBC0194E067C00B25725 /* DFPokerHandTableViewCell.m in Sources */,
 				A3D39CD41948D398000B10F2 /* UIImage+Resizing.m in Sources */,
 				A3C5CF77194771E200D8F7CE /* main.m in Sources */,
 				A3D39CC11948B560000B10F2 /* DFDataModelController.m in Sources */,

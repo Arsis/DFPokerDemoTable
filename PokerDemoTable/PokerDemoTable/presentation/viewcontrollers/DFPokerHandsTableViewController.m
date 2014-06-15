@@ -10,7 +10,7 @@
 #import "DFPokerHandManager.h"
 #import "DFPokerGame.h"
 #import "DFPokerHand.h"
-
+#import "DFPokerHandTableViewCell.h"
 #import <math.h>
 
 static NSString *const kPokerHandCellId = @"DFPokerHandCell";
@@ -107,14 +107,15 @@ static NSString *const kPokerTableSegue = @"DFPokerTableSegue";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kPokerHandCellId
+    DFPokerHandTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kPokerHandCellId
                                                             forIndexPath:indexPath];
     if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault
-                                     reuseIdentifier:kPokerHandCellId];
+        cell = [[DFPokerHandTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault
+                                              reuseIdentifier:kPokerHandCellId];
     }
     DFPokerHand *pokerHand = self.availablePokerHands[indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %.0f/%.0f",pokerHand.name, pokerHand.smallBlind, pokerHand.bigBlind];
+    cell.handNameLabel.text = pokerHand.name;
+    cell.stakeLabel.text = [NSString stringWithFormat:@"%.0f/%.0f",pokerHand.smallBlind, pokerHand.bigBlind];
     return cell;
 }
 
