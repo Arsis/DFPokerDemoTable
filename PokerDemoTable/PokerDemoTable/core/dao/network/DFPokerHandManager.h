@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString *const kDownloadOperationFinishedNotification;
+
 typedef void(^DownloadCompletionHandler)(NSArray *scenarios, NSError *error);
 
 @interface DFPokerHandManager : NSObject

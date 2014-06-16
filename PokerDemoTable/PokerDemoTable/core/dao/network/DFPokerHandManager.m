@@ -11,7 +11,11 @@
 #import "DFConnector.h"
 #import <Reachability.h>
 
-static NSString *const kHostName = @"cs539420.vk.me";
+static NSString *const kHostName = @"drive.google.com";
+static NSString *const kPokerHandsKey = @"scenarios";
+static NSString *const kPokerHandKey = @"scenario";
+
+NSString *const kDownloadOperationFinishedNotification = @"DownloadOperationFinished";
 
 @interface DFPokerHandManager () <DFConnectorDelegate>
 @property (nonatomic, strong) NSMutableArray *pokerHands;
@@ -51,8 +55,8 @@ static NSString *const kHostName = @"cs539420.vk.me";
         [self handleSuccess:pokerHandsInfo];
     }
     else {
-        NSString *filePath = @"/u121786827/docs/2b04211c607d/Scenarios.json";
-        [self.connector downloadDataWithURLString:[NSString stringWithFormat:@"http://%@/%@",kHostName,filePath]];
+        NSString *filePath = @"uc?export=download&id=0B8iMnmfS7D72NTVEcDJ3Qk8wZkU";
+        [self.connector downloadDataWithURLString:[NSString stringWithFormat:@"https://%@/%@",kHostName,filePath]];
     }
 }
 
@@ -81,25 +85,25 @@ static NSString *const kHostName = @"cs539420.vk.me";
 }
 
 - (void)handleSuccess:(NSDictionary *)pokerHandsInfo {
-    NSArray *rawPockerHands = pokerHandsInfo[@"scenarios"];
+    NSArray *rawPockerHands = pokerHandsInfo[kPokerHandsKey];
     NSMutableArray *parsedPockerHands = [NSMutableArray arrayWithCapacity:rawPockerHands.count];
     for (id rawPockerHand in rawPockerHands) {
-        DFPokerHand *pokerHand = [DFPokerHand pokerHandWithDictionary:rawPockerHand[@"scenario"]];
+        DFPokerHand *pokerHand = [DFPokerHand pokerHandWithDictionary:rawPockerHand[kPokerHandKey]];
         [parsedPockerHands addObject:pokerHand];
     }
     self.pokerHands = [NSMutableArray arrayWithArray:parsedPockerHands];
     self.completionHandler(self.pokerHands, nil);
     self.completionHandler = nil;
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"DownloadOperationFinished"
-                                                        object:nil
+    [[NSNotificationCenter defaultCenter] postNotificationName:kDownloadOperationFinishedNotification
+                                                        object:self.pokerHands
                                                       userInfo:nil];
 }
 
 - (void)handleError:(NSError *)error {
     self.completionHandler(nil, error);
     self.completionHandler = nil;
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"DownloadOperationFinished"
-                                                        object:nil
+    [[NSNotificationCenter defaultCenter] postNotificationName:kDownloadOperationFinishedNotification
+                                                        object:error
                                                       userInfo:nil];
 }
 
